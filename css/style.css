@@ -125,7 +125,7 @@ ol {
 }
 
 .section-title h2 {
-	color: #ffffff;
+	color: #000000;
 	font-size: 32px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -585,7 +585,7 @@ ol {
 -----------------------*/
 
 .choseus-section {
-	background: #0a0a0a;
+	background: #ffffff;
 	padding-bottom: 70px;
 }
 
@@ -626,7 +626,7 @@ ol {
 -----------------------*/
 
 .classes-section {
-	background: #151515;
+	background: #ffffff;
 	padding-bottom: 80px;
 }
 
@@ -762,7 +762,7 @@ ol {
 -----------------------*/
 
 .pricing-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .pricing-section .section-title {
@@ -880,7 +880,7 @@ ol {
 -----------------------*/
 
 .gallery-section {
-	background: #151515;
+	background: #ffffff;
 	overflow: hidden;
 }
 
@@ -939,7 +939,7 @@ ol {
 -----------------------*/
 
 .team-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .team-section.team-page {
@@ -977,7 +977,6 @@ ol {
 }
 
 .primary-btn.appoinment-btn {
-	background: transparent;
 	border: 2px solid #f36100;
 	float: right;
 	margin-top: 10px;
@@ -1251,7 +1250,7 @@ ol {
 	color: #ffffff;
 	font-weight: 600;
 	text-transform: uppercase;
-	margin-bottom: 15px;
+	margin-bottom: 40px;
 }
 
 .breadcrumb-text .bt-option a {
@@ -1357,7 +1356,7 @@ ol {
 -----------------------*/
 
 .testimonial-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .ts_slider.owl-carousel .owl-item img {
@@ -1416,7 +1415,7 @@ ol {
 -----------------------*/
 
 .services-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .ss-pic img {
@@ -1487,7 +1486,7 @@ ol {
 -----------------------*/
 
 .class-timetable-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .class-timetable-section.class-details-timetable {
@@ -1681,7 +1680,7 @@ ol {
 -----------------------*/
 
 .class-details-section {
-	background: #151515;
+	background: #ffffff;
 	padding-bottom: 60px;
 }
 
@@ -1948,7 +1947,7 @@ ol {
 -------------------------*/
 
 .bmi-calculator-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .section-title.chart-title {
@@ -2046,7 +2045,7 @@ ol {
 -----------------------*/
 
 .blog-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .blog-section .sidebar-option {
@@ -2198,7 +2197,7 @@ ol {
 -----------------------*/
 
 .blog-details-section {
-	background: #151515;
+	background: #ffffff;
 	padding-top: 80px;
 	overflow: hidden;
 }
@@ -2264,7 +2263,7 @@ ol {
 	top: -26px;
 	height: 55px;
 	width: 55px;
-	background: #151515;
+	background: #ffffff;
 	border: 2px solid #363636;
 	line-height: 47px;
 	text-align: center;
@@ -2546,7 +2545,7 @@ ol {
 -----------------------*/
 
 .contact-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .section-title.contact-title {
@@ -2883,7 +2882,7 @@ ol {
 		font-size: 22px;
 		width: 30px;
 		height: 30px;
-		border: 1px solid #151515;
+		border: 1px solid #ffffff;
 		border-radius: 2px;
 		text-align: center;
 		line-height: 27px;
@@ -2931,8 +2930,8 @@ ol {
 	.offcanvas-menu-wrapper .slicknav_nav a {
 		padding: 10px 0;
 		margin: 0;
-		color: #151515;
-		border-bottom: 1px solid #151515;
+		color: #ffffff;
+		border-bottom: 1px solid #ffffff;
 		font-weight: 500;
 		font-family: "Oswald", sans-serif;
 		font-size: 15px;
@@ -3029,7 +3028,7 @@ ol {
 		font-size: 22px;
 		width: 30px;
 		height: 30px;
-		border: 1px solid #151515;
+		border: 1px solid #ffffff;
 		border-radius: 2px;
 		text-align: center;
 		line-height: 27px;
@@ -3077,8 +3076,8 @@ ol {
 	.offcanvas-menu-wrapper .slicknav_nav a {
 		padding: 10px 0;
 		margin: 0;
-		color: #151515;
-		border-bottom: 1px solid #151515;
+		color: #ffffff;
+		border-bottom: 1px solid #ffffff;
 		font-weight: 500;
 		font-family: "Oswald", sans-serif;
 		font-size: 15px;
