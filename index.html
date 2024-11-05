@@ -277,16 +277,37 @@
                 <p>Hear from those who transformed their lives with us.</p>
             </div>
             <div class="col-lg-12">
-                <!-- Placeholder video for testing -->
-                <video controls style="width: 100%; height: auto;     border-radius: 12em 1em;">
+                <!-- Add autoplay, muted, and playsinline attributes to enable automatic playback -->
+                <video id="testimonialVideo" autoplay muted playsinline style="width: 100%; height: auto; border-radius: 12em 1em;">
                     <source src="img/Transformations/Design sans titre.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    // Select the video element
+    const video = document.getElementById('testimonialVideo');
+
+    // Create an IntersectionObserver to toggle play and pause based on visibility
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Play the video automatically when it becomes visible
+                video.play();
+            } else {
+                // Pause the video when it is not visible
+                video.pause();
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the video is visible
+
+    // Start observing the video
+    observer.observe(video);
+</script>
+
     
     
     
