@@ -2877,7 +2877,6 @@ ol {
 		left: 0;
 		opacity: 1;
 		visibility: visible;
-		z-index: 100000;
 	}
 	.offcanvas-menu-wrapper .canvas-close {
 		font-size: 22px;
@@ -2931,8 +2930,8 @@ ol {
 	.offcanvas-menu-wrapper .slicknav_nav a {
 		padding: 10px 0;
 		margin: 0;
-		color: #000000;
-		border-bottom: 1px solid #000000;
+		color: #ffffff;
+		border-bottom: 1px solid #ffffff;
 		font-weight: 500;
 		font-family: "Oswald", sans-serif;
 		font-size: 15px;
@@ -3079,8 +3078,8 @@ ol {
 	.offcanvas-menu-wrapper .slicknav_nav a {
 		padding: 10px 0;
 		margin: 0;
-		color: #000000;
-		border-bottom: 1px solid #000000;
+		color: #ffffff;
+		border-bottom: 1px solid #ffffff;
 		font-weight: 500;
 		font-family: "Oswald", sans-serif;
 		font-size: 15px;
