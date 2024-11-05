@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="./css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="./css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
+    
+    
 </head>
 
 <body>
@@ -62,10 +64,11 @@
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="canvas-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            
         </div>
     </div>
     <!-- Offcanvas Menu Section End -->
@@ -124,20 +127,29 @@
 
     <!-- Hero Section Begin -->
 
-    <section class="breadcrumb-section set-bg" data-setbg="img/hero/hero-1.jpg">
+    <section class="breadcrumb-section set-bg" data-setbg="img/hero/hero-1.jpg" style="padding: 120px 0; position: relative; overflow: hidden;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="breadcrumb-text">
-                        <h2 style="opacity: 0; animation: fadeIn 2s ease-out forwards;">Shape your body</h2>
-                        <a href="#" class="primary-btn" style="position: relative; display: inline-block; animation: bounce 1.5s infinite;">
-                            Get info
+                    <div class="breadcrumb-text" style="max-width: 100%; padding: 68px 20px 20px; box-sizing: border-box;">
+                        <!-- Smaller First Title -->
+                        <h2 style="font-size: 1.2em; opacity: 0; animation: fadeIn 2s ease-out forwards; margin-bottom: 20px;">
+                            We GUARANTEE you this is your last start to
+                        </h2>
+                        <!-- Larger Second Title -->
+                        <h2 style="font-size: 2.2em; opacity: 0; animation: fadeIn 2s ease-out forwards;">
+                            BUILD STRENGTH, LOSE FAT AND BOOST CONFIDENCE
+                        </h2>
+                        <!-- Button with hover and icon adjustments -->
+                        <a href="#" class="primary-btn" style="position: relative; display: inline-block; animation: bounce 1.5s infinite; z-index: 10000;">
+                            BOOK YOUR FREE CONSULTATION
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     
     <!-- Inline Keyframes and Hover Effect -->
     <style>
@@ -164,19 +176,32 @@
         }
     }
     
-    /* Button base style */
     .primary-btn {
-        position: relative;
-        color: #ffffff;
-        background-color: #ff6600;
-        padding: 15px 30px;
-        font-size: 1.2em;
-        border-radius: 4px;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        overflow: hidden;
-        white-space: nowrap;
+    color: #ffffff;
+    background-color: #ff6600;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .primary-btn {
+        padding: 10px 20px;
+        font-size: 1em;
     }
+}
+
+@media (max-width: 480px) {
+    .primary-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
     
     /* Button hover to grow and reveal arrow */
     .primary-btn:hover {
@@ -206,40 +231,87 @@
         transform: translate(5px, -50%); /* Slight movement to the right */
     }
     </style>
-    
+        
     <!-- Hero Section End -->
-
+    
     <!-- ChoseUs Section Begin -->
-    <section class="choseus-section spad">
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-9ee2a811-8b31-476a-bcc3-49b59bb667cc" data-elfsight-app-lazy></div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Function to hide the element
-                function hideUnwantedLink() {
-                    const unwantedLink = document.querySelector('a[href*="https://elfsight.com/google-reviews-widget"]');
-                    if (unwantedLink) {
-                        unwantedLink.style.display = "none";
-                        observer.disconnect(); // Stop observing once the element is hidden
-                    }
-                }
-            
-                // MutationObserver to detect changes in the DOM
-                const observer = new MutationObserver(hideUnwantedLink);
-            
-                // Start observing the body for added nodes
-                observer.observe(document.body, { childList: true, subtree: true });
-            
-                // Initial check in case the element is already present
-                hideUnwantedLink();
-            });
-            </script>
-            
-            
-    </section>
+
+    
+<!-- Choose Us Section Begin -->
+<section class="chooseus-section spad">
+    <div class="container">
+        <div class="row">
+            <!-- Text Section -->
+            <div class="col-lg-6">
+                <div class="chooseus-text">
+                    <h2 style="margin-bottom: 1em;">You Want to Lose 10-20kg? Let's Make It Happen!</h2>
+                    <p style="margin-bottom: 20px;">Are you ready to embark on a journey that will redefine your limits, your goals, and your life?</p>
+                    
+                    <p><i class="fa fa-heartbeat"></i> <strong>At AG Fitness, we’re not just another gym</strong> — we are your dedicated partner in this journey. Our mission is to empower you to achieve your goals and reach new heights. Whether you're focusing on <strong>weight loss</strong>, <strong>muscle gain</strong>, or simply boosting your energy levels, we are here to make it possible. And we’re with you every step of the way.</p>
+                    
+                    <p><i class="fa fa-sun"></i> Imagine waking up every day with a renewed sense of energy and strength, a confidence that fuels you to accomplish more. Here, you’re not just a member — you’re part of a <strong>community</strong> that believes in you, supports you, and celebrates your achievements.</p>
+                    
+                    <p><i class="fa fa-handshake-o"></i> <strong>Guidance. Encouragement. Motivation.</strong> At AG Fitness, we bring these elements together to create a unique experience. Our coaches, trainers, and staff are fully committed to helping you succeed. We believe that every small victory leads to big changes, and we’re here to celebrate them with you.</p>
+                    
+                    <p><i class="fa fa-road"></i> The journey toward your best self starts here and now. With AG Fitness, this is more than a gym — it’s a path to a healthier, happier, and stronger you. <strong>Are you ready to take the first step?</strong></p>
+                </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="col-lg-6 image-container">
+                <img src="./img/Transformations/Man.jpg" alt="Inspiring fitness moment at AG Fitness">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Choose Us Section End -->
+<section class="video-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title">
+                    <span>Testimonials</span>
+                    <h2>What Our Clients Say</h2>
+                </div>
+                <p>Hear from those who transformed their lives with us.</p>
+            </div>
+            <div class="col-lg-12">
+                <!-- Placeholder video for testing -->
+                <video controls style="width: 100%; height: auto;     border-radius: 12em 1em;">
+                    <source src="img/Transformations/Design sans titre.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+            </div>
+        </div>
+    </div>
+</section>
+    
+    
+    
+    
+    
+    <!-- ChoseUs Section End -->
+    
+    <!-- Inline CSS for image responsiveness -->
+    <style>
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Adjusts image fit */
+        max-height: 100%; /* Ensures image does not overflow section */
+    }
+    </style>
     
     <!-- ChoseUs Section End -->
 
+
+
+
+
+
+    
     <!-- Transformations Section Begin -->
     <section class="team-section spad">
         <div class="container">

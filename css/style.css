@@ -76,7 +76,7 @@ h6 {
 }
 
 p {
-	font-size: 14px;
+	font-size: 18px;
 	font-family: "Muli", sans-serif;
 	color: #a9a9a9;
 	font-weight: 400;
@@ -2982,6 +2982,7 @@ ol {
 		-webkit-transition: 0.3s;
 		-o-transition: 0.3s;
 		transition: 0.3s;
+
 	}
 	.offcanvas-menu-overlay.active {
 		visibility: visible;
@@ -3023,6 +3024,7 @@ ol {
 		left: 0;
 		opacity: 1;
 		visibility: visible;
+		z-index: 100000;
 	}
 	.offcanvas-menu-wrapper .canvas-close {
 		font-size: 22px;
@@ -3233,3 +3235,16 @@ ol {
 		font-size: 28px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
