@@ -660,6 +660,65 @@
             </div>
         </div>
     </section>
+
+
+
+    <div class="social-buttons">
+        <a href="#" class="social-icon fb-icon"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="social-icon insta-icon"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="social-icon twitter-icon"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="social-icon whatsapp-icon"><i class="fa fa-whatsapp"></i></a>
+    </div>
+<style>
+    .social-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1000;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.fb-icon:hover { background-color: #3b5998; }
+.insta-icon:hover { background-color: #e4405f; }
+.twitter-icon:hover { background-color: #1da1f2; }
+.whatsapp-icon:hover { background-color: #25d366; }
+
+.social-buttons.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>    
+<script>
+    document.addEventListener("scroll", () => {
+    const socialButtons = document.querySelector(".social-buttons");
+    if (window.scrollY > 100) {
+        socialButtons.classList.add("visible");
+    } else {
+        socialButtons.classList.remove("visible");
+    }
+});
+
+</script>
     <!-- Footer Section End -->
 
     <!-- Search model Begin -->
