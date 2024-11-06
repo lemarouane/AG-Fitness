@@ -126,10 +126,11 @@ ol {
 
 .section-title h2 {
 	color: #000000;
-	font-size: 32px;
+	font-size: 50px;
 	font-weight: 600;
 	text-transform: uppercase;
 	margin-top: 8px;
+	text-align: -webkit-center;
 }
 
 .set-bg {
@@ -164,7 +165,7 @@ ol {
 /* buttons */
 
 .primary-btn {
-	display: inline-block;
+	display: flow-root;
 	font-size: 14px;
 	padding: 17px 30px 16px;
 	color: #ffffff;
@@ -173,6 +174,7 @@ ol {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-weight: 700;
+	border-radius: 33px;
 }
 
 .primary-btn.btn-normal {
