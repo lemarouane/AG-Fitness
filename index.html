@@ -229,33 +229,125 @@
     <!-- ChoseUs Section Begin -->
 
     
+
+
+
+
+
+    
 <!-- Choose Us Section Begin -->
-<section class="chooseus-section spad">
+<!-- Choose Us Section Begin -->
+<section class="chooseus-section spad" style="padding: 60px 0;  ">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-stretch">
             <!-- Text Section -->
-            <div class="col-lg-6">
-                <div class="chooseus-text">
-                    <h2 style="margin-bottom: 1em;     text-align: -webkit-center;     text-transform: uppercase;     font-weight: 500;">You Want to Lose 10-20kg ?<br>Let's Make It Happen!</h2>
-                    <p style="margin-bottom: 20px;">Are you ready to embark on a journey that will redefine your limits, your goals, and your life?</p>
+            <div class="col-lg-6 d-flex">
+                <div class="chooseus-text" style="padding: 30px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 10px 30px rgba(0,0,0,0.1); flex-grow: 1;">
+                    <h2 style="font-size: 2em; font-weight: bold; color: #333; text-align: center; margin-bottom: 1em; text-transform: uppercase;">
+                        You Want to Lose 10-20kg? <br> Let's Make It Happen!
+                    </h2>
+                    <p style="margin-bottom: 20px; font-size: 1.1em; color: #555;">
+                        Are you ready to embark on a journey that will redefine your limits, your goals, and your life?
+                    </p>
                     
-                    <p><i class="fa fa-heartbeat"></i> <strong>At AG Fitness, we’re not just another gym</strong> — we are your dedicated partner in this journey. Our mission is to empower you to achieve your goals and reach new heights. Whether you're focusing on <strong>weight loss</strong>, <strong>muscle gain</strong>, or simply boosting your energy levels, we are here to make it possible. And we’re with you every step of the way.</p>
+                    <p style="font-size: 1.05em;">
+                        <i class="fa fa-heartbeat" style="color: #ff6600; margin-right: 8px;"></i>
+                        <strong>At AG Fitness, we’re not just another gym</strong> — we are your dedicated partner in this journey. Whether you're focusing on <strong>weight loss</strong>, <strong>muscle gain</strong>, or simply boosting your energy levels, we’re here to make it possible.
+                    </p>
                     
-                    <p><i class="fa fa-sun"></i> Imagine waking up every day with a renewed sense of energy and strength, a confidence that fuels you to accomplish more. Here, you’re not just a member — you’re part of a <strong>community</strong> that believes in you, supports you, and celebrates your achievements.</p>
+                    <p style="font-size: 1.05em;">
+                        <i class="fa fa-handshake-o" style="color: #ff6600; margin-right: 8px;"></i>
+                        <strong>Guidance. Encouragement. Motivation.</strong> Our coaches and staff are committed to your success, celebrating each small victory.
+                    </p>
                     
-                    <p><i class="fa fa-handshake-o"></i> <strong>Guidance. Encouragement. Motivation.</strong> At AG Fitness, we bring these elements together to create a unique experience. Our coaches, trainers, and staff are fully committed to helping you succeed. We believe that every small victory leads to big changes, and we’re here to celebrate them with you.</p>
+                    <p style="font-size: 1.05em;">
+                        <i class="fa fa-road" style="color: #ff6600; margin-right: 8px;"></i>
+                        Start your journey toward a healthier, stronger you with AG Fitness. <strong>Are you ready to take the first step?</strong>
+                    </p>
+                    <p style="font-size: 1.05em;">
+                        <i class="fa fa-heartbeat" style="color: #ff6600; margin-right: 8px;"></i>
+                        <strong>At AG Fitness, we’re not just another gym</strong> — we are your dedicated partner in this journey. Whether you're focusing on <strong>weight loss</strong>, <strong>muscle gain</strong>, or simply boosting your energy levels, we’re here to make it possible.
+                    </p>
                     
-                    <p><i class="fa fa-road"></i> The journey toward your best self starts here and now. With AG Fitness, this is more than a gym — it’s a path to a healthier, happier, and stronger you. <strong>Are you ready to take the first step?</strong></p>
+
+                    <!-- Call-to-Action Button -->
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="#" class="cta-button">
+                            Book Your Free Consultation
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- Image Section -->
-            <div class="col-lg-6 image-container">
-                <img src="./img/Transformations/Man.jpg" alt="Inspiring fitness moment at AG Fitness" style="    border-radius: 1em 5em;">
+            <div class="col-lg-6 d-flex align-items-stretch">
+                <div style="border-radius: 10px; overflow: hidden; box-shadow: 0px 10px 30px rgba(0,0,0,0.1); flex-grow: 1;">
+                    <img src="./img/Transformations/Man.jpg" alt="Inspiring fitness moment at AG Fitness" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Inline CSS for Button Styling -->
+<style>
+    /* Button styling */
+    .cta-button {
+        color: #ffffff;
+        background-color: #ff6600;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        transition: padding-right 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover effect to swap colors and reveal arrow */
+    .cta-button:hover {
+        color: #ff6600; /* Text color changes to orange */
+        background-color: #ffffff; /* Background changes to white */
+        padding-right: 60px;
+    }
+
+    /* Arrow icon on hover */
+    .cta-button::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-image: url('./img/hero/arrow.png'); /* Adjust path if needed */
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-button:hover::after {
+        opacity: 1;
+        transform: translate(8px, -50%);
+    }
+
+    /* Responsive text adjustments */
+    @media (max-width: 768px) {
+        .chooseus-text h2 {
+            font-size: 2em;
+        }
+        .chooseus-text p {
+            font-size: 1em;
+        }
+    }
+</style>
+
+
+<!-- Choose Us Section End -->
+
 
 <!-- Choose Us Section End -->
 <section class="video-section spad" style="padding: 0px;">
@@ -346,7 +438,7 @@
                         <div class="ts-item set-bg" data-setbg="./img/team/team-1.jpg">
                             <div class="ts_text">
                                 <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
+                                <span>Client X</span>
                             </div>
                         </div>
                     </div>
@@ -354,7 +446,7 @@
                         <div class="ts-item set-bg" data-setbg="./img/team/team-2.jpg">
                             <div class="ts_text">
                                 <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
+                                <span>Client X</span>
                             </div>
                         </div>
                     </div>
@@ -362,7 +454,7 @@
                         <div class="ts-item set-bg" data-setbg="./img/team/team-3.jpg">
                             <div class="ts_text">
                                 <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
+                                <span>Client X</span>
                             </div>
                         </div>
                     </div>
@@ -370,7 +462,7 @@
                         <div class="ts-item set-bg" data-setbg="./img/team/team-4.jpg">
                             <div class="ts_text">
                                 <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
+                                <span>Client X</span>
                             </div>
                         </div>
                     </div>
@@ -378,7 +470,7 @@
                         <div class="ts-item set-bg" data-setbg="./img/team/team-5.jpg">
                             <div class="ts_text">
                                 <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
+                                <span>Client X</span>
                             </div>
                         </div>
                     </div>
@@ -386,7 +478,7 @@
                         <div class="ts-item set-bg" data-setbg="./img/team/team-6.jpg">
                             <div class="ts_text">
                                 <h4>Athart Rachel</h4>
-                                <span>Gym Trainer</span>
+                                <span>Client X</span>
                             </div>
                         </div>
                     </div>
@@ -413,86 +505,20 @@
     <!-- Banner Section End -->
 
     <!-- Pricing Section Begin -->
-    <section class="pricing-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>Our Plan</span>
-                        <h2>Choose your pricing plan</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-8">
-                    <div class="ps-item">
-                        <h3>Class drop-in</h3>
-                        <div class="pi-price">
-                            <h2>$ 39.0</h2>
-                            <span>SINGLE CLASS</span>
-                        </div>
-                        <ul>
-                            <li>Free riding</li>
-                            <li>Unlimited equipments</li>
-                            <li>Personal trainer</li>
-                            <li>Weight losing classes</li>
-                            <li>Month to mouth</li>
-                            <li>No time restriction</li>
-                        </ul>
-                        <a href="#" class="primary-btn pricing-btn">BOOK YOUR FREE CONSULTATION</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-8">
-                    <div class="ps-item">
-                        <h3>12 Month unlimited</h3>
-                        <div class="pi-price">
-                            <h2>$ 99.0</h2>
-                            <span>SINGLE CLASS</span>
-                        </div>
-                        <ul>
-                            <li>Free riding</li>
-                            <li>Unlimited equipments</li>
-                            <li>Personal trainer</li>
-                            <li>Weight losing classes</li>
-                            <li>Month to mouth</li>
-                            <li>No time restriction</li>
-                        </ul>
-                        <a href="#" class="primary-btn pricing-btn">BOOK YOUR FREE CONSULTATION</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-8">
-                    <div class="ps-item">
-                        <h3>6 Month unlimited</h3>
-                        <div class="pi-price">
-                            <h2>$ 59.0</h2>
-                            <span>SINGLE CLASS</span>
-                        </div>
-                        <ul>
-                            <li>Free riding</li>
-                            <li>Unlimited equipments</li>
-                            <li>Personal trainer</li>
-                            <li>Weight losing classes</li>
-                            <li>Month to mouth</li>
-                            <li>No time restriction</li>
-                        </ul>
-                        <a href="#" class="primary-btn pricing-btn">BOOK YOUR FREE CONSULTATION</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
     <!-- Pricing Section End -->
 
 
     <!-- Team Section Begin -->
-    <section class="team-section spad" style="padding-top: 0px;">
+    <section class="team-section spad"  ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="team-title">
                         <div class="section-title">
-                            <span>Our Team</span>
+                            <span><center>Our Team</center></span>
                             <h2>TRAIN WITH EXPERTS</h2>
+ 
                         </div>
                         <a href="#" class="primary-btn btn-normal appoinment-btn">BOOK YOUR FREE CONSULTATION</a>
                     </div>
