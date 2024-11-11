@@ -134,7 +134,6 @@
                         <h2>Contact Us</h2>
                         <div class="bt-option">
                             <a href="./index.html">Home</a>
-                            <a href="#">Pages</a>
                             <span>Contact us</span>
                         </div>
                     </div>
@@ -156,35 +155,111 @@
                     <div class="contact-widget">
                         <div class="cw-text">
                             <i class="fa fa-map-marker"></i>
-                            <p>333 Middle Winchendon Rd, Rindge,<br/> NH 03461</p>
+                            <p>AG Fitness - Personal Trainers Dubai serves clients across the entire Dubai area </p>
                         </div>
                         <div class="cw-text">
                             <i class="fa fa-mobile"></i>
                             <ul>
-                                <li>125-711-811</li>
-                                <li>125-668-886</li>
+                                <li>123-456-789</li>
+                                <li>123-456-789</li>
                             </ul>
                         </div>
                         <div class="cw-text email">
                             <i class="fa fa-envelope"></i>
-                            <p>Support.gymcenter@gmail.com</p>
+                            <p>info@agfitnessdxb.com</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="leave-comment">
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Website">
-                            <textarea placeholder="Comment"></textarea>
+                        <form id="contactForm">
+                            <input type="text" name="fullName" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="phoneNumber" placeholder="Phone Number" required>
+                            <textarea name="comment" placeholder="Comment" required></textarea>
                             <button type="submit">Submit</button>
                         </form>
+                        
+                        <!-- Success Message Modal -->
+                        <div id="successMessage" style="display: none;">
+                            <div class="success-box">
+                                <span class="check-icon">✔️</span>
+                                <p>Thank you for contacting us!</p>
+                            </div>
+                        </div>
+                        
+                        <style>
+                            /* Style the success message */
+                            #successMessage {
+                                position: fixed;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background-color: #d4edda;
+                                color: #155724;
+                                border: 1px solid #c3e6cb;
+                                border-radius: 5px;
+                                padding: 20px;
+                                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                                z-index: 1000;
+                            }
+                            .check-icon {
+                                font-size: 24px;
+                                color: green;
+                                display: block;
+                                text-align: center;
+                                margin-bottom: 10px;
+                            }
+                            .success-box p {
+                                text-align: center;
+                                font-size: 18px;
+                                margin: 0;
+                            }
+                        </style>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from submitting normally
+
+    // Show the success message immediately
+    const successMessage = document.getElementById("successMessage");
+    successMessage.style.display = "block";
+
+    // Hide the message after 3 seconds, regardless of form submission status
+    setTimeout(() => {
+        successMessage.style.display = "none";
+    }, 3000);
+
+    // Collect form data
+    const formData = new FormData(this);
+    const data = new URLSearchParams(formData);
+
+    // Send data to Google Apps Script Web App asynchronously
+    fetch("https://script.google.com/macros/s/AKfycbyxcYo9k2hgVdN7gw0zNPMEX1IlOG6xiuBlqOw3PNjZbWU9DvrRziEQCaOuJYhh_AQq/exec", {
+        method: "POST",
+        body: data,
+    })
+    .then(response => response.text())
+    .then(result => {
+        console.log("Data saved successfully:", result);
+
+        // Reset form fields after submission
+        document.getElementById("contactForm").reset();
+    })
+    .catch(error => {
+        console.error("Error!", error.message);
+
+        // Optionally, you can keep the success box hidden if an error occurs
+    });
+});
+
+
+</script>                        
+                        
                     </div>
                 </div>
             </div>
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12087.069761554938!2d-74.2175599360452!3d40.767139456514954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c254b5958982c3%3A0xb6ab3931055a2612!2sEast%20Orange%2C%20NJ%2C%20USA!5e0!3m2!1sen!2sbd!4v1581710470843!5m2!1sen!2sbd"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d553786.7814324835!2d55.0072465!3d25.014285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6da00f56f12f%3A0xba8d543988b024e2!2sAG%20Fitness%20-%20Personal%20Trainers%20Dubai!5e1!3m2!1sen!2sma!4v1731327107495!5m2!1sen!2sma"
                     height="550" style="border:0;" allowfullscreen=""></iframe>
             </div>
         </div>
@@ -198,22 +273,22 @@
                 <div class="col-md-4">
                     <div class="gt-text">
                         <i class="fa fa-map-marker"></i>
-                        <p>333 Middle Winchendon Rd, Rindge,<br/> NH 03461</p>
+                        <p>AG Fitness - Personal Trainers Dubai serves clients across the entire Dubai area </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="gt-text">
                         <i class="fa fa-mobile"></i>
                         <ul>
-                            <li>125-711-811</li>
-                            <li>125-668-886</li>
+                            <li>123-456-789</li>
+                            <li>123-456-789</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="gt-text email">
                         <i class="fa fa-envelope"></i>
-                        <p>Support.gymcenter@gmail.com</p>
+                        <p>info@agfitnessdxb.com</p>
                     </div>
                 </div>
             </div>

@@ -2467,7 +2467,7 @@ ol {
 
 .leave-comment form input {
 	font-size: 13px;
-	color: #c4c4c4;
+	color: #000000;
 	width: 100%;
 	height: 46px;
 	border: 1px solid #363636;
@@ -2475,6 +2475,7 @@ ol {
 	padding-right: 5px;
 	background: transparent;
 	margin-bottom: 20px;
+	border-radius: 20px;
 }
 
 .leave-comment form input::-webkit-input-placeholder {
@@ -2499,7 +2500,7 @@ ol {
 
 .leave-comment form textarea {
 	font-size: 13px;
-	color: #c4c4c4;
+	color: #000000;
 	width: 100%;
 	height: 100px;
 	border: 1px solid #363636;
@@ -2509,6 +2510,8 @@ ol {
 	background: transparent;
 	margin-bottom: 14px;
 	resize: none;
+	border-radius: 20px;
+
 }
 
 .leave-comment form textarea::-webkit-input-placeholder {
@@ -2540,6 +2543,7 @@ ol {
 	border: none;
 	padding: 14px 0 12px;
 	background: #f36100;
+	border-radius: 20px;
 }
 
 /*---------------------
@@ -2551,7 +2555,7 @@ ol {
 }
 
 .section-title.contact-title {
-	text-align: left;
+	text-align: center;
 	margin-bottom: 35px;
 }
 
@@ -2576,7 +2580,7 @@ ol {
 
 .contact-widget .cw-text p {
 	overflow: hidden;
-	color: #c4c4c4;
+	color: #3b3b3b;
 	margin-bottom: 0;
 	padding-top: 10px;
 }
@@ -2589,7 +2593,7 @@ ol {
 .contact-widget .cw-text ul li {
 	list-style: none;
 	font-size: 14px;
-	color: #c4c4c4;
+	color: #303030;
 	margin-right: 25px;
 	display: inline-block;
 	position: relative;
