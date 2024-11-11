@@ -3212,6 +3212,7 @@ ol {
 	.primary-btn.appoinment-btn {
 		float: none;
 		margin-top: 0;
+		text-align: center;
 	}
 	.hs-slider .hs-item .hi-text h1 {
 		font-size: 38px;
@@ -3255,3 +3256,4 @@ ol {
 
 
 
+ 
