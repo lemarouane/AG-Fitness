@@ -2534,6 +2534,17 @@ ol {
 	color: #c4c4c4;
 }
 
+.leave-comment form button {
+	font-size: 14px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 700;
+	width: 100%;
+	border: none;
+	padding: 14px 0 12px;
+	background: #f36100;
+	border-radius: 20px;
+}
 
 /*---------------------
   Contact Section
