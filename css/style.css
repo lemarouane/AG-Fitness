@@ -597,8 +597,10 @@ ol {
 }
 
 .cs-item:hover span {
-	background: #f36100;
-	color: #ffffff;
+	background: #ffffff;
+	color: #f36100;
+
+
 }
 
 .cs-item span {
@@ -607,12 +609,14 @@ ol {
 	background: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
 	display: inline-block;
-	color: #f36100;
+	color: #ffffff;
 	line-height: 90px;
 	text-align: center;
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+	background: #f36100;
+
 }
 
 .cs-item h4 {
