@@ -13,6 +13,6 @@ User-agent: Googlebot
 Allow: /             # Allow Googlebot full access
 Crawl-delay: 10      # Wait 10 seconds between requests (adjust as necessary)
 
-User-agent: Bingbot
+User-agent: Bingbot      
 Allow: /
 Crawl-delay: 15      # Wait 15 seconds between requests
