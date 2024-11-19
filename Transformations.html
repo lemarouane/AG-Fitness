@@ -116,56 +116,195 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Team Section Begin -->
-    <section class="team-section spad" >
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="team-title">
-                        <div class="section-title">
-                            <span><center>Our Clients' Transformations</center></span>
-                            <h2>Their Lives Have Changed</h2>
-
-                        </div>
-                        <a href="contact.html" class="primary-btn btn-normal appoinment-btn"><center>BOOK YOUR FREE CONSULTATION</center></a>
+<!-- Team Section Begin -->
+<section class="team-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="team-title">
+                    <div class="section-title">
+                        <span><center>Our Clients' Transformations</center></span>
+                        <h2>Their Lives Have Changed</h2>
                     </div>
+                    <a href="contact.html" class="primary-btn btn-normal appoinment-btn"><center>BOOK YOUR FREE CONSULTATION</center></a>
                 </div>
             </div>
-            <div class="row">
-                <div class="ts-slider owl-carousel">
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/Transformations/transformation-1.jpg" style="height: 360px; border-radius: 75px 0px;">
- 
-                        </div>
+        </div>
+        <div class="row">
+            <div class="ts-slider owl-carousel">
+                <!-- Image 1 -->
+                <div class="col-lg-4">
+                    <div class="ts-item" style="height: 360px; border-radius: 75px 0px; cursor: pointer;" 
+                        onclick="openModal('Transformation Title 1', 'Description for transformation 1.', './img/Transformations/transformation-1.jpg')">
+                        <img src="./img/Transformations/transformation-1.jpg" alt="Transformation 1" style="border-radius: 75px 0px; width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/Transformations/transformation-1.jpg" style="height: 360px; border-radius: 75px 0px;">
- 
-                        </div> 
+                </div>
+                <!-- Image 2 -->
+                <div class="col-lg-4">
+                    <div class="ts-item" style="height: 360px; border-radius: 75px 0px; cursor: pointer;" 
+                        onclick="openModal('Transformation Title 2', 'Description for transformation 2.', './img/Transformations/transformation-1.jpg')">
+                        <img src="./img/Transformations/transformation-1.jpg" alt="Transformation 2" style="border-radius: 75px 0px; width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/Transformations/transformation-1.jpg" style="height: 360px;border-radius: 75px 0px;">
- 
-                        </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="col-lg-4">
+                    <div class="ts-item" style="height: 360px; border-radius: 75px 0px; cursor: pointer;" 
+                        onclick="openModal('Transformation Title 3', 'Description for transformation 3.', './img/Transformations/transformation-1.jpg')">
+                        <img src="./img/Transformations/transformation-1.jpg" alt="Transformation 3" style="border-radius: 75px 0px; width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/Transformations/transformation-1.jpg" style="height: 360px;border-radius: 75px 0px;">
- 
-                        </div>
+                </div>
+                <!-- Image 4 -->
+                <div class="col-lg-4">
+                    <div class="ts-item" style="height: 360px; border-radius: 75px 0px; cursor: pointer;" 
+                        onclick="openModal('Transformation Title 4', 'Description for transformation 4.', './img/Transformations/transformation-1.jpg')">
+                        <img src="./img/Transformations/transformation-1.jpg" alt="Transformation 4" style="border-radius: 75px 0px; width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/Transformations/transformation-1.jpg" style="height: 360px;border-radius: 75px 0px;">
- 
-                        </div>
+                </div>
+                <!-- Image 5 -->
+                <div class="col-lg-4">
+                    <div class="ts-item" style="height: 360px; border-radius: 75px 0px; cursor: pointer;" 
+                        onclick="openModal('Transformation Title 5', 'Description for transformation 5.', './img/Transformations/transformation-1.jpg')">
+                        <img src="./img/Transformations/transformation-1.jpg" alt="Transformation 5" style="border-radius: 75px 0px; width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/Transformations/transformation-1.jpg" style="height: 360px;border-radius: 75px 0px;">
- 
-                        </div>
+                </div>
+                <!-- Image 6 -->
+                <div class="col-lg-4">
+                    <div class="ts-item" style="height: 360px; border-radius: 75px 0px; cursor: pointer;" 
+                        onclick="openModal('Transformation Title 6', 'Description for transformation 6.', './img/Transformations/transformation-1.jpg')">
+                        <img src="./img/Transformations/transformation-1.jpg" alt="Transformation 6" style="border-radius: 75px 0px; width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- Team Section End -->
+
+<!-- Modal Section -->
+<div id="transformationModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="Transformation Image">
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle">Title</h3>
+                <p id="modalDescription">Description</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Styles -->
+<style>
+    /* Modal Container */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Modal Content */
+    .modal-content {
+        margin: 10% auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 900px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .modal-image {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .modal-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .modal-info {
+        flex: 1;
+    }
+
+    .modal-info h3 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+    }
+
+    .modal-info p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #000;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: red;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .modal-body {
+            flex-direction: column;
+        }
+
+        .modal-image {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+<!-- Modal Script -->
+<script>
+    function openModal(title, description, imageSrc) {
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalDescription').textContent = description;
+        document.getElementById('modalImage').src = imageSrc;
+        document.getElementById('transformationModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('transformationModal').style.display = 'none';
+    }
+
+    // Close modal on clicking outside the content
+    window.onclick = function(event) {
+        const modal = document.getElementById('transformationModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
+</script>
+
     <!-- Team Section End -->
 
     <!-- Get In Touch Section Begin -->
