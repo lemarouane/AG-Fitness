@@ -2,50 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <!-- Homepage -->
    <url>
-      <loc>https://yourwebsite.com/index.html</loc>
-      <lastmod>2024-11-17</lastmod>
+      <loc>https://agfitnessdxb.com/index.html</loc>
+      <lastmod>2024-11-20</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
    </url>
    <!-- About Us Page -->
    <url>
-      <loc>https://yourwebsite.com/about-us.html</loc>
-      <lastmod>2024-11-17</lastmod>
+      <loc>https://agfitnessdxb.com/about-us.html</loc>
+      <lastmod>2024-11-20</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
-   <!-- Services Page -->
+   <!-- Transformations Page -->
    <url>
-      <loc>https://yourwebsite.com/services.html</loc>
-      <lastmod>2024-11-17</lastmod>
+      <loc>https://agfitnessdxb.com/transformations.html</loc>
+      <lastmod>2024-11-20</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
+      <priority>0.9</priority>
    </url>
    <!-- Our Team Page -->
    <url>
-      <loc>https://yourwebsite.com/team.html</loc>
-      <lastmod>2024-11-17</lastmod>
+      <loc>https://agfitnessdxb.com/team.html</loc>
+      <lastmod>2024-11-20</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
-   </url>
-   <!-- Gallery Page -->
-   <url>
-      <loc>https://yourwebsite.com/gallery.html</loc>
-      <lastmod>2024-11-17</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.6</priority>
    </url>
    <!-- Contact Page -->
    <url>
-      <loc>https://yourwebsite.com/contact.html</loc>
-      <lastmod>2024-11-17</lastmod>
+      <loc>https://agfitnessdxb.com/contact.html</loc>
+      <lastmod>2024-11-20</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <priority>0.8</priority>
    </url>
-   <!-- Blog Page (if applicable) -->
+   <!-- Testimonials Page -->
    <url>
-      <loc>https://yourwebsite.com/blog.html</loc>
-      <lastmod>2024-11-17</lastmod>
+      <loc>https://agfitnessdxb.com/testimonials.html</loc>
+      <lastmod>2024-11-20</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <!-- Services Page -->
+   <url>
+      <loc>https://agfitnessdxb.com/services.html</loc>
+      <lastmod>2024-11-20</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <!-- Blog Page -->
+   <url>
+      <loc>https://agfitnessdxb.com/blog.html</loc>
+      <lastmod>2024-11-20</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
    </url>
