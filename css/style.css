@@ -39,6 +39,34 @@ body {
 	font-smoothing: antialiased;
 }
 
+/* For Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6600, #f36100); /* Style the scrollbar thumb */
+    border-radius: 6px; /* Rounded scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Make the scrollbar track invisible */
+}
+
+::-webkit-scrollbar-button {
+    display: none; /* Hide the arrows at the top and bottom */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* Make the scrollbar minimal */
+    scrollbar-color: #ff6600 transparent; /* Thumb color, no visible track */
+}
+
+/* Optional: Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #f36100, #c0392b); /* Darker color on hover */
+}
 
 
 
@@ -2071,7 +2099,6 @@ ol {
 }
 
 .blog-item .bi-pic img {
-	width: 360px;
 	height: 240px;
 	min-width: 100%;
 }
