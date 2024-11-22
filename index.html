@@ -985,55 +985,104 @@
     </section>
 
 <!-- Floating Buttons -->
-<div id="floating-buttons">
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/123456789" target="_blank" id="whatsapp-button" title="Chat with us on WhatsApp">
-        <img src="./img/icons/whatsapp.png" alt="WhatsApp">
+<!-- Floating Buttons -->
+<div id="whatsapp-button">
+    <a href="https://wa.me/123456789" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
     </a>
-    <!-- Back to Top Button -->
-    <button id="back-to-top-button" title="Back to Top">
+</div>
+<div id="back-to-top-button">
+    <button title="Back to Top">
         <img src="./img/icons/top.png" alt="Back to Top">
     </button>
 </div>
+
 <style>
     
-/* Floating Buttons Container */
-#floating-buttons {
+/* WhatsApp Button */
+#whatsapp-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
 }
 
-/* WhatsApp Button */
-#whatsapp-button img,
-#back-to-top-button img {
-    width: 50px;
-    height: 50px;
+#whatsapp-button a {
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
 }
 
-#whatsapp-button img:hover,
-#back-to-top-button img:hover {
+#whatsapp-button a:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Back to Top Button */
+/* Back-to-Top Button */
 #back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
     display: none; /* Initially hidden */
+}
+
+#back-to-top-button button {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#back-to-top-button button img {
+    width: 100%;
+    height: auto;
+}
+
+#back-to-top-button button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 </style>
+<script>
+    // Back-to-Top Button Visibility on Scroll
+    const backToTopButton = document.getElementById("back-to-top-button");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+
+    // Smooth Scroll to Top
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
    
 <script>
