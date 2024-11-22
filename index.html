@@ -1075,13 +1075,13 @@
 
 </style>
 <script>
-    // Back-to-Top Button Visibility on Scroll
+    // Back-to-Top Button Smooth Appearance
     const backToTopButton = document.getElementById("back-to-top-button");
     window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
-            backToTopButton.style.display = "block";
+            backToTopButton.classList.add("visible");
         } else {
-            backToTopButton.style.display = "none";
+            backToTopButton.classList.remove("visible");
         }
     });
 
@@ -1093,6 +1093,7 @@
         });
     });
 </script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
