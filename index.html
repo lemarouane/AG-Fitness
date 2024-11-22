@@ -985,17 +985,20 @@
     </section>
 
 <!-- Floating Buttons -->
-<!-- Floating Buttons -->
+<!-- Floating WhatsApp Button -->
 <div id="whatsapp-button">
     <a href="https://wa.me/123456789" target="_blank" title="Chat with us on WhatsApp">
         <i class="fa fa-whatsapp"></i>
     </a>
 </div>
+
+<!-- Back-to-Top Button -->
 <div id="back-to-top-button">
     <button title="Back to Top">
         <img src="./img/icons/top.png" alt="Back to Top">
     </button>
 </div>
+
 
 <style>
     
@@ -1005,14 +1008,15 @@
     bottom: 20px;
     left: 20px;
     z-index: 9999;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #whatsapp-button a {
     background-color: #25D366; /* WhatsApp green */
     color: white;
-    font-size: 24px;
-    width: 60px;
-    height: 60px;
+    font-size: 28px; /* Larger icon */
+    width: 70px; /* Larger round button */
+    height: 70px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1034,6 +1038,14 @@
     right: 20px;
     z-index: 9999;
     display: none; /* Initially hidden */
+    opacity: 0; /* Smooth appearance */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#back-to-top-button.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Reset transform */
 }
 
 #back-to-top-button button {
@@ -1041,8 +1053,8 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    width: 60px;
-    height: 60px;
+    width: 50px; /* Smaller round button */
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
