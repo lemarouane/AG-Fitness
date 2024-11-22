@@ -171,6 +171,23 @@
         });
     });
 
+    // Back-to-Top Button Smooth Appearance
+    const backToTopButton = document.getElementById("back-to-top-button");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add("visible");
+        } else {
+            backToTopButton.classList.remove("visible");
+        }
+    });
+
+    // Smooth Scroll to Top
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 
 
 })(jQuery);
