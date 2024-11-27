@@ -275,7 +275,142 @@
 <!-- Blog Section End -->
 
 
+<!-- Contact Section Begin -->
+<section class="contact-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title contact-title">
+                    <span>Contact Us</span>
+                    <h2>GET IN TOUCH</h2>
+                </div>
+                <div class="contact-widget">
+                    <div class="cw-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>AG Fitness - Personal Trainers Dubai serves clients across the entire Dubai area </p>
+                    </div>
+                    <div class="cw-text">
+                        <a href="https://wa.me/yourwhatsappnumber" target="_blank">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                        <ul>
+                            <li><a href="https://wa.me/123456789" target="_blank" style="color: black;">123-456-789</a></li>
+                        </ul>
+                    </div>
+                    <div class="cw-text email">
+                        <a href="mailto:info@agfitnessdxb.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                            <p> <a href="mailto:info@agfitnessdxb.com" style="color: black;">info@agfitnessdxb.com</a> </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="leave-comment">
+                    <form id="contactForm">
+                        <input type="text" name="fullName" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phoneNumber" placeholder="Phone Number" required>
+                        <textarea name="comment" placeholder="Your Goal!" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                    
+                    <!-- Success Message Modal -->
+                    <div id="successMessage" style="display: none;">
+                        <div class="success-box">
+                            <span class="check-icon">✔️</span>
+                            <p>Thank you for contacting us!</p>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        /* Style the success message */
+                        #successMessage {
+                            position: fixed;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: #d4edda;
+                            color: #155724;
+                            border: 1px solid #c3e6cb;
+                            border-radius: 5px;
+                            padding: 20px;
+                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                            z-index: 1000;
+                        }
+                        .check-icon {
+                            font-size: 24px;
+                            color: green;
+                            display: block;
+                            text-align: center;
+                            margin-bottom: 10px;
+                        }
+                        .success-box p {
+                            text-align: center;
+                            font-size: 18px;
+                            margin: 0;
+                        }
+                    </style>
 
+                    <script>
+                        document.getElementById("contactForm").addEventListener("submit", function(event) {
+                            event.preventDefault(); // Prevent form from submitting normally
+
+                            // Show the success message immediately
+                            const successMessage = document.getElementById("successMessage");
+                            successMessage.style.display = "block";
+
+                            // Hide the message after 3 seconds, regardless of form submission status
+                            setTimeout(() => {
+                                successMessage.style.display = "none";
+                            }, 3000);
+
+                            // Collect form data
+                            const formData = new FormData(this);
+                            const data = new URLSearchParams(formData);
+
+                            // Send data to both Web Apps asynchronously
+                            // First web app (for storing data)
+                            fetch("https://script.google.com/macros/s/AKfycbyxcYo9k2hgVdN7gw0zNPMEX1IlOG6xiuBlqOw3PNjZbWU9DvrRziEQCaOuJYhh_AQq/exec", {
+                                method: "POST",
+                                body: data,
+                            })
+                            .then(response => response.text())
+                            .then(result => {
+                                console.log("Data saved successfully:", result);
+                            })
+                            .catch(error => {
+                                console.error("Error saving data!", error.message);
+                            });
+
+                            // Second web app (for sending email)
+                            fetch("https://script.google.com/macros/s/AKfycby63Ydl1QB2p7pzNm-pAjTqJ5Kc_rCKQFPXgSHk2E23zNbXhayvTg4k53rnSTZe2mxY/exec", {
+                                method: "POST",
+                                body: data,
+                            })
+                            .then(response => response.text())
+                            .then(result => {
+                                console.log("Email sent successfully:", result);
+                            })
+                            .catch(error => {
+                                console.error("Error sending email!", error.message);
+                            });
+
+                            // Reset form fields after submission
+                            document.getElementById("contactForm").reset();
+                        });
+                    </script>  
+                    
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d553786.7814324835!2d55.0072465!3d25.014285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6da00f56f12f%3A0xba8d543988b024e2!2sAG%20Fitness%20-%20Personal%20Trainers%20Dubai!5e1!3m2!1sen!2sma!4v1731327107495!5m2!1sen!2sma"
+                height="550" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+</section>
+<!-- Contact Section End -->
 
 
 
