@@ -1035,7 +1035,7 @@ ol {
 	margin-right: 15px;
 	-webkit-transform: skewY(-5deg);
 	-ms-transform: skewY(-5deg);
-	transform: skewY(-5deg);
+	transform: skewY(-5deg);     
 }
 
 .ts-slider.owl-carousel .owl-dots button.active {
@@ -1045,7 +1045,7 @@ ol {
 .ts-slider.owl-carousel .owl-dots button:last-child {
 	margin-right: 0;
 }
-  
+        
 .ts-item {
 	height: 700px;
 	position: relative;
