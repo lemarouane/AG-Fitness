@@ -689,59 +689,83 @@
 
 
 
+<style>
+/* Default styles (desktop or larger devices) */
+.team-title .section-title {
+    text-align: left;
+}
+.team-title .appoinment-btn {
+    margin-left: 0;
+}
 
-    <!-- Team Section Begin -->
-    <section class="team-section spad"  ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="team-title">
-                        <div class="section-title">
-                            <span><center>Our Team</center></span>
-                            <h2>TRAIN WITH EXPERTS</h2>
- 
-                        </div>
-                        <a href="contact.html" class="primary-btn btn-normal appoinment-btn">BOOK YOUR FREE CONSULTATION</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="ts-slider owl-carousel">
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/AGTEAM/1.Amir.png">
+/* Tablet-specific styles */
+@media (max-width: 768px) {
+    .team-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/AGTEAM/2.Vlatka.png">
+    .tablet-center-title {
+        text-align: center;
+        margin-left: 10em;
+    }
+    .tablet-center-subtitle {
+        text-align: center;
+        margin-bottom: -0.5em;
+    }
 
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/AGTEAM/3.Mirza.png">
+    .tablet-center-button {
+        display: inline-block;
+        text-align: center;
+        margin-right: 0em;
+        margin-bottom: 2em;
+    }
+}
 
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/AGTEAM/4.Ammar.png">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/AGTEAM/5.Rada.png">
 
-                        </div>
+</style>
+<!-- Team Section Begin -->
+<section class="team-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="team-title">
+                    <div class="section-title">
+                        <span class="tablet-center-title">Our Team</span>
+                        <h2 class="tablet-center-subtitle">TRAIN WITH EXPERTS</h2>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="./img/AGTEAM/6.Ilhan.png">
-
-                        </div>
-                    </div>
+                    <a href="contact.html" class="primary-btn btn-normal appoinment-btn tablet-center-button">BOOK YOUR FREE CONSULTATION</a>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Team Section End -->
+        <div class="row">
+            <div class="ts-slider owl-carousel">
+                <div class="col-lg-4">
+                    <div class="ts-item set-bg" data-setbg="./img/AGTEAM/1.Amir.png"></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ts-item set-bg" data-setbg="./img/AGTEAM/2.Vlatka.png"></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ts-item set-bg" data-setbg="./img/AGTEAM/3.Mirza.png"></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ts-item set-bg" data-setbg="./img/AGTEAM/4.Ammar.png"></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ts-item set-bg" data-setbg="./img/AGTEAM/5.Rada.png"></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ts-item set-bg" data-setbg="./img/AGTEAM/6.Ilhan.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team Section End -->
+
+
 
 
 
