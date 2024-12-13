@@ -270,191 +270,6 @@
     }
     </style>
         
-
-
-
-
-<!-- Choose Us Section Begin -->
-<section class="chooseus-section spad" style="padding: 60px 0;  ">
-    <div class="container">
-        <div class="row align-items-stretch">
-            <!-- Text Section -->
-            <div class="col-lg-6 d-flex">
-                <div class="chooseus-text" style="padding: 30px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 10px 30px rgba(0,0,0,0.1); flex-grow: 1;">
-                    <h2 style="font-size: 2em; font-weight: bold; color: #333; text-align: center; margin-bottom: 1em; text-transform: uppercase;">
-                        You Want to Lose 10-20kg? <br> Let's Make It Happen!
-                    </h2>
-                    <p style="margin-bottom: 20px; font-size: 1.1em; color: #555;">
-                        Are you ready to embark on a journey that will redefine your limits, your goals, and your life?
-                    </p>
-                    
-                    <p style="font-size: 1.05em;">
-                        <i class="fa fa-heartbeat" style="color: #ff6600; margin-right: 8px;"></i>
-                        <strong>At AG Fitness, we’re not just another gym</strong> — we are your dedicated partner in this journey. Whether you're focusing on <strong>weight loss</strong>, <strong>muscle gain</strong>, or simply boosting your energy levels, we’re here to make it possible.
-                    </p>
-                    
-                    <p style="font-size: 1.05em;">
-                        <i class="fa fa-handshake-o" style="color: #ff6600; margin-right: 8px;"></i>
-                        <strong>Guidance. Encouragement. Motivation.</strong> Our coaches and staff are committed to your success, celebrating each small victory.
-                    </p>
-                    
-                    <p style="font-size: 1.05em;">
-                        <i class="fa fa-road" style="color: #ff6600; margin-right: 8px;"></i>
-                        Start your journey toward a healthier, stronger you with AG Fitness. <strong>Are you ready to take the first step?</strong>
-                    </p>
-                    <p style="font-size: 1.05em;">
-                        <i class="fa fa-heartbeat" style="color: #ff6600; margin-right: 8px;"></i>
-                        <strong>At AG Fitness, we’re not just another gym</strong> — we are your dedicated partner in this journey. Whether you're focusing on <strong>weight loss</strong>, <strong>muscle gain</strong>, or simply boosting your energy levels, we’re here to make it possible.
-                    </p>
-                    
-
-                    <!-- Call-to-Action Button -->
-                    <div style="text-align: center; margin-top: 30px;">
-                        <a href="contact.html" class="cta-button">
-                            Book Your Free Consultation
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Image Section -->
-            <div class="col-lg-6 d-flex align-items-stretch">
-                <div style="border-radius: 10px; overflow: hidden; box-shadow: 0px 10px 30px rgba(0,0,0,0.1); flex-grow: 1;">
-                    <img src="./img/Transformations/Man.jpg" alt="AG Fitness - Inspiring Fitness Transformation for Men" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Inline CSS for Button Styling -->
-<style>
-    /* Button styling */
-    .cta-button {
-        color: #ffffff;
-        background-color: #ff6600;
-        padding: 15px 30px;
-        font-size: 1.2em;
-        font-weight: bold;
-        border-radius: 50px;
-        text-decoration: none;
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        transition: padding-right 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    }
-
-    /* Hover effect to swap colors and reveal arrow */
-    .cta-button:hover {
-        color: #ff6600; /* Text color changes to orange */
-        background-color: #ffffff; /* Background changes to white */
-        padding-right: 60px;
-    }
-
-    /* Arrow icon on hover */
-    .cta-button::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        background-image: url('./img/hero/arrow.png'); /* Adjust path if needed */
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .cta-button:hover::after {
-        opacity: 1;
-        transform: translate(8px, -50%);
-    }
-
-    /* Responsive text adjustments */
-    @media (max-width: 768px) {
-        .chooseus-text h2 {
-            font-size: 2em;
-        }
-        .chooseus-text p {
-            font-size: 1em;
-        }
-    }
-</style>
-<!-- Choose Us Section End -->
-
-
-
-
-
-
-
-<!-- Video Section Begin -->
-<section class="video-section spad" style="padding: 0px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="section-title">
-                    <span>Testimonials</span>
-                    <h2>What Our Clients Say</h2>
-                </div>
-                <p>Hear from those who transformed their lives with us.</p>
-            </div>
-            <div class="col-lg-12">
-                <!-- Add autoplay, muted, and playsinline attributes to enable automatic playback -->
-                <video id="testimonialVideo" autoplay muted playsinline style="width: 100%; height: auto; border-radius: 4em 0em;">
-                    <source src="img/Transformations/Video.mp4" alt="Client Testimonials Video - AG Fitness" type="video/mp4">
-                    
-                </video>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script>
-    // Select the video element
-    const video = document.getElementById('testimonialVideo');
-
-    // Create an IntersectionObserver to toggle play and pause based on visibility
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Play the video automatically when it becomes visible
-                video.play();
-            } else {
-                // Pause the video when it is not visible
-                video.pause();
-            }
-        });
-    }, { threshold: 0.5 }); // Trigger when 50% of the video is visible
-
-    // Start observing the video
-    observer.observe(video);
-</script>
-
-    <!-- Inline CSS for image responsiveness -->
-    <style>
-    .image-container img {
-        width: 100%;
-        height: auto;
-        object-fit: cover; /* Adjusts image fit */
-        max-height: 100%; /* Ensures image does not overflow section */
-    }
-    </style>
-    
-<!-- Video Section End -->
-
-
-
-
-
-
-
-
-
-
-    
 <!-- Transformations Section Begin -->
 <section class="team-section spad">
     <div class="container">
@@ -523,6 +338,207 @@
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Video Section Begin -->
+<section class="video-section spad" style="padding: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title">
+                    <span>Testimonials</span>
+                    <h2>What Our Clients Say</h2>
+                </div>
+                <p>Hear from those who transformed their lives with us.</p>
+            </div>
+            <div class="col-lg-12">
+                <!-- Add autoplay, muted, and playsinline attributes to enable automatic playback -->
+                <video id="testimonialVideo" autoplay muted playsinline style="width: 100%; height: auto; border-radius: 4em 0em;">
+                    <source src="img/Transformations/Video.mp4" alt="Client Testimonials Video - AG Fitness" type="video/mp4">
+                    
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Select the video element
+    const video = document.getElementById('testimonialVideo');
+
+    // Create an IntersectionObserver to toggle play and pause based on visibility
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Play the video automatically when it becomes visible
+                video.play();
+            } else {
+                // Pause the video when it is not visible
+                video.pause();
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the video is visible
+
+    // Start observing the video
+    observer.observe(video);
+</script>
+
+    <!-- Inline CSS for image responsiveness -->
+    <style>
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Adjusts image fit */
+        max-height: 100%; /* Ensures image does not overflow section */
+    }
+    </style>
+    
+<!-- Video Section End -->
+
+
+
+
+
+<!-- Choose Us Section Begin -->
+<section class="chooseus-section spad" style="padding: 60px 0; background: linear-gradient(45deg, #ff6600, #ff9966);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Text Section -->
+            <div class="col-lg-10 d-flex justify-content-center">
+                <div class="chooseus-text" style="padding: 40px 50px; position: relative; box-shadow: 0px 15px 30px rgba(0,0,0,0.2); text-align: center; max-width: 900px; z-index: 1;">
+                    
+                    <!-- Background Emoji Sticker -->
+                    <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: -1;">
+                        <span style="font-size: 8em; color: rgba(255, 102, 0, 0.15);">🏋️‍♂️</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h2 style="font-size: 3em; font-weight: bold; color: #333; margin-bottom: 1.5em; text-transform: uppercase; line-height: 1.2; position: relative; font-family: 'Poppins', sans-serif;">
+                        You Want to Lose 10-20kg? <br> Let's Make It Happen!
+                    </h2>
+
+                    <!-- Text Content -->
+                    <p style="font-size: 1.2em; color: #555; margin-bottom: 30px; line-height: 1.8; position: relative; font-family: 'Roboto', sans-serif;">
+                        Are you ready to embark on a journey that will redefine your limits, your goals, and your life?
+                    </p>
+
+                    <div class="chooseus-details" style="position: relative;">
+                        <!-- Floating Emoji Sticker -->
+                        <div style="position: absolute; left: -50px; top: 30px; transform: rotate(-15deg); z-index: -1;">
+                            <span style="font-size: 7em; color: rgba(255, 102, 0, 0.2);">💪</span>
+                        </div>
+
+                        <p style="font-size: 1.15em; color: #555; margin-bottom: 20px; line-height: 1.6;">
+                            <i class="fa fa-heartbeat" style="color: #ff6600; margin-right: 8px;"></i>
+                            <strong>At AG Fitness, we’re not just another gym</strong> — we are your dedicated partner in this journey. Whether you're focusing on <strong>weight loss</strong>, <strong>muscle gain</strong>, or simply boosting your energy levels, we’re here to make it possible.
+                        </p>
+
+                        <p style="font-size: 1.15em; color: #555; margin-bottom: 20px; line-height: 1.6;">
+                            <i class="fa fa-handshake-o" style="color: #ff6600; margin-right: 8px;"></i>
+                            <strong>Guidance. Encouragement. Motivation.</strong> Our coaches and staff are committed to your success, celebrating each small victory.
+                        </p>
+
+                        <p style="font-size: 1.15em; color: #555; margin-bottom: 40px; line-height: 1.6;">
+                            <i class="fa fa-road" style="color: #ff6600; margin-right: 8px;"></i>
+                            Start your journey toward a healthier, stronger you with AG Fitness. <strong>Are you ready to take the first step?</strong>
+                        </p>
+                    </div>
+
+                    <!-- Call-to-Action Button -->
+                    <div style="text-align: center; margin-top: 30px; position: relative; z-index: 1;">
+                        <a href="contact.html" class="cta-button">
+                            Book Your Free Consultation
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Choose Us Section End -->
+
+<!-- Inline CSS for Button Styling -->
+<style>
+    /* Button styling */
+    .cta-button {
+        color: #ffffff;
+        background-color: #ff6600;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        transition: padding-right 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover effect to swap colors and reveal arrow */
+    .cta-button:hover {
+        color: #ff6600; /* Text color changes to orange */
+        background-color: #ffffff; /* Background changes to white */
+        padding-right: 60px;
+    }
+
+    /* Arrow icon on hover */
+    .cta-button::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-image: url('./img/hero/arrow.png'); /* Adjust path if needed */
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-button:hover::after {
+        opacity: 1;
+        transform: translate(8px, -50%);
+    }
+
+    /* Add a slight fade-in effect */
+    @keyframes fadeInEffect {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .chooseus-text {
+        animation: fadeInEffect 0.8s ease-in-out;
+    }
+
+    /* Responsive text adjustments */
+    @media (max-width: 768px) {
+        .chooseus-text h2 {
+            font-size: 2em;
+        }
+        .chooseus-text p {
+            font-size: 1em;
+        }
+    }
+</style>
+
+
+
+
+
+    
+
 <!-- Modal Section -->
 <div id="transformationModal" class="modal" style="display: none;">
     <div class="modal-content">
