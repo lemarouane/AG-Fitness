@@ -167,7 +167,7 @@ ol {
 
 .spad {
 	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-bottom: 100px; 
 }
 
 .spad-2 {
@@ -203,7 +203,7 @@ ol {
 	border-radius: 33px;
 }
 
-.primary-btn.btn-normal {
+.primary-btn.btn-normal {    
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
