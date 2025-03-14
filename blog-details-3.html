@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/icons/agfitlogo.svg" type="image/png">
+
+    <title>Blogs | AG Fitness</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">             
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="./team.html">Our Team</a></li>
+                <li><a href="./Transformations.html">Transformations</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section" id="navbar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo" style="position: absolute; top: -3em; left: 10px; z-index: 1000;">
+                        <a href="./index.html">
+                            <img src="./img/icons/agfitlogo.svg" alt="AG Fitness Logo - Dubai's Leading Fitness Center" style="width: 150px; height: auto;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li ><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About Us</a></li>
+                            <li><a href="./team.html">Our Team</a></li>
+                            <li><a href="./Transformations.html">Transformations</a></li>
+                            <li class="active"><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        
+                        <div class="to-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+<!-- Blog Details Hero Section Begin -->
+<section class="breadcrumb-section set-bg" 
+data-setbg="img/hero/hero-1.jpg" 
+style="padding: 120px 0; position: relative; overflow: hidden; background-position: 50% 30%; background-size: cover;">
+<!-- Dark overlay -->
+<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.28); z-index: 0;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 p-0 m-auto text-center">
+                <div class="bh-text" style="margin-top: 5em;">
+                    <h3>The Benefits of Strength Training</h3>
+                    <ul style="list-style: none; padding: 0; display: inline-block; margin-top: 15px;">
+                        <li style="display: inline; margin-right: 15px; font-size: 14px; color: #666;">
+                            <i class="fa fa-user" style="margin-right: 5px;"></i>By Amir
+                        </li>
+                        <li style="display: inline; font-size: 14px; color: #666;">
+                            <i class="fa fa-calendar" style="margin-right: 5px;"></i>Nov 21, 2024
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Details Hero Section End -->
+
+    <!-- Blog Details Section Begin -->
+
+    <style>
+        .image-modal {
+          display: none;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .image-modal img {
+          max-width: 90%;
+          max-height: 90%;
+        }
+      
+        .image-modal .close-btn {
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          font-size: 30px;
+          color: white;
+          cursor: pointer;
+        }
+      </style>
+      <style>
+        .ts-item {
+          position: relative;
+          cursor: pointer; /* Change cursor to pointer on hover */
+          overflow: hidden; /* Prevent enlarged image from spilling out */
+          transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+      
+        .ts-item:hover {
+          transform: scale(1.1); /* Scale the image slightly */
+        }
+      </style>
+<style>
+    .ts-item:hover {
+      transform: scale(1.1);
+      filter: brightness(1.2); /* Slightly increase brightness */
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+    }
+  </style>
+        
+      
+
+    <section class="team-section team-page spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+ 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ts-item set-bg" data-setbg="img/details-3/1-10.webp">
+ 
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ts-item set-bg" data-setbg="img/details-3/2-8.webp">
+ 
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ts-item set-bg" data-setbg="img/details-3/3-8.webp">
+ 
+                    </div>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+
+
+    <section class="blog-details-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            <p>Strength training is one of the most effective ways to transform your body and health. It not only helps you build lean muscle mass but also improves overall body composition and metabolism. In this post, we explore how strength training leads to enhanced muscle growth, fat reduction, and better overall well-being.</p>
+                            <h5>Why Strength Training is Essential for Your Fitness Goals</h5>
+                            <p>Building muscle through strength training is crucial for anyone looking to sculpt a leaner, more toned physique. The benefits go far beyond aesthetics, as increased muscle mass improves your metabolic rate, body composition, and even bone health. Let’s break down the key reasons why strength training should be a part of your fitness routine.</p>
+                        </div>
+    
+                        <div class="blog-details-desc">
+                            <p>Strength training offers a multitude of benefits for your body, from building lean muscle to increasing bone density and improving metabolism. Here’s a closer look at how each of these advantages can positively impact your health:</p>
+                            
+                            <h6>Increased Lean Muscle Mass</h6>
+                            <p>Strength training stimulates muscle growth, helping you achieve a more sculpted and toned physique. The process of muscle hypertrophy results in lean muscle mass, giving you a stronger, more defined body.</p>
+                            <p><strong>Fact:</strong> Research has shown that strength training enhances muscle protein synthesis, leading to muscle growth and a more toned appearance.</p>
+    
+                            <h6>Enhanced Metabolic Rate</h6>
+                            <p>Building muscle through strength training boosts your resting metabolic rate, which means you’ll burn more calories, even when you’re not working out. This helps with weight management and overall fat loss.</p>
+                            <p><strong>Fact:</strong> Muscle tissue is more metabolically active than fat, requiring more energy to maintain. The more muscle you build, the higher your metabolic rate becomes, even during rest.</p>
+    
+                            <h6>Improved Body Composition</h6>
+                            <p>Strength training not only helps you gain muscle but also reduces body fat percentage, leading to a healthier body composition. A balanced ratio of lean muscle to fat is key to improving overall fitness and appearance.</p>
+                            <p><strong>Fact:</strong> Studies have shown that strength training can lead to significant reductions in body fat, especially when combined with a balanced diet.</p>
+    
+                            <h6>Increased Bone Density</h6>
+                            <p>Strength training places beneficial stress on the bones, stimulating bone remodeling and increasing bone density. This is vital for maintaining strong bones and preventing conditions like osteoporosis.</p>
+                            <p><strong>Fact:</strong> Research indicates that regular strength training can significantly increase bone mineral density, reducing the risk of fractures and supporting long-term bone health.</p>
+                        </div>
+    
+                        <div class="blog-details-quote">
+                            <div class="quote-icon">
+                                <img src="img/blog/details/quote-left.png" alt="Quote">
+                            </div>
+                            <h5>"Strength training not only changes your body, it changes your life. Every rep is a step closer to a healthier, stronger you."</h5>
+                            <span>Amir, Fitness Coach</span>
+                        </div>
+    
+                        <div class="blog-details-more-desc">
+                            <p>By incorporating strength training into your routine, you’re building more than just muscle—you’re enhancing your overall health, boosting your metabolism, improving your bone health, and transforming your body composition. The benefits extend far beyond the gym, affecting your energy, confidence, and longevity.</p>
+                            <p>Start incorporating strength training today, and watch as your body grows stronger, leaner, and healthier. With patience and consistency, the results will speak for themselves!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <!-- Blog Details Section End -->
+
+
+
+<!-- Contact Section Begin -->
+<section class="contact-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title contact-title">
+                    <span>Contact Us</span>
+                    <h2>GET IN TOUCH</h2>
+                </div>
+                <div class="contact-widget">
+                    <div class="cw-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>AG Fitness - Personal Trainers Dubai serves clients across the entire Dubai area </p>
+                    </div>
+                    <div class="cw-text">
+                        <a href="https://wa.me/yourwhatsappnumber" target="_blank">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                        <ul>
+                            <li><a href="https://wa.me/971585736600" target="_blank" style="color: black;">+971 58 573 6600</a></li>
+                        </ul>
+                    </div>
+                    <div class="cw-text email">
+                        <a href="mailto:info@agfitnessdxb.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                            <p> <a href="mailto:info@agfitnessdxb.com" style="color: black;">info@agfitnessdxb.com</a> </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="leave-comment">
+                    <form id="contactForm">
+                        <input type="text" name="fullName" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phoneNumber" placeholder="Phone Number" required>
+                        <textarea name="comment" placeholder="Your Goal!" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                    
+                    <!-- Success Message Modal -->
+                    <div id="successMessage" style="display: none;">
+                        <div class="success-box">
+                            <span class="check-icon">✔️</span>
+                            <p>Thank you for contacting us!</p>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        /* Style the success message */
+                        #successMessage {
+                            position: fixed;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: #d4edda;
+                            color: #155724;
+                            border: 1px solid #c3e6cb;
+                            border-radius: 5px;
+                            padding: 20px;
+                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                            z-index: 1000;
+                        }
+                        .check-icon {
+                            font-size: 24px;
+                            color: green;
+                            display: block;
+                            text-align: center;
+                            margin-bottom: 10px;
+                        }
+                        .success-box p {
+                            text-align: center;
+                            font-size: 18px;
+                            margin: 0;
+                        }
+                    </style>
+
+                    <script>
+                        document.getElementById("contactForm").addEventListener("submit", function(event) {
+                            event.preventDefault(); // Prevent form from submitting normally
+
+                            // Show the success message immediately
+                            const successMessage = document.getElementById("successMessage");
+                            successMessage.style.display = "block";
+
+                            // Hide the message after 3 seconds, regardless of form submission status
+                            setTimeout(() => {
+                                successMessage.style.display = "none";
+                            }, 3000);
+
+                            // Collect form data
+                            const formData = new FormData(this);
+                            const data = new URLSearchParams(formData);
+
+                            // Send data to both Web Apps asynchronously
+                            // First web app (for storing data)
+                            fetch("https://script.google.com/macros/s/AKfycbyxcYo9k2hgVdN7gw0zNPMEX1IlOG6xiuBlqOw3PNjZbWU9DvrRziEQCaOuJYhh_AQq/exec", {
+                                method: "POST",
+                                body: data,
+                            })
+                            .then(response => response.text())
+                            .then(result => {
+                                console.log("Data saved successfully:", result);
+                            })
+                            .catch(error => {
+                                console.error("Error saving data!", error.message);
+                            });
+
+                            // Second web app (for sending email)
+                            fetch("https://script.google.com/macros/s/AKfycbxZ-J9BjGIbtK-2JDmnhxIKl4I6qE226J4Q4Zdyb7MyJ6wfY51VPMyqG7h9nsH5NaN1/exec", {
+                                method: "POST",
+                                body: data,
+                            })
+                            .then(response => response.text())
+                            .then(result => {
+                                console.log("Email sent successfully:", result);
+                            })
+                            .catch(error => {
+                                console.error("Error sending email!", error.message);
+                            });
+
+                            // Reset form fields after submission
+                            document.getElementById("contactForm").reset();
+                        });
+                    </script>  
+                    
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d553786.7814324835!2d55.0072465!3d25.014285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6da00f56f12f%3A0xba8d543988b024e2!2sAG%20Fitness%20-%20Personal%20Trainers%20Dubai!5e1!3m2!1sen!2sma!4v1731327107495!5m2!1sen!2sma"
+                height="550" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+</section>
+<!-- Contact Section End -->
+
+
+
+
+
+
+
+
+
+    <!-- Get In Touch Section Begin -->
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>AG Fitness - Personal Trainers Dubai serves clients across the entire Dubai area </p>
+                </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-whatsapp"></i>
+                        <ul>
+                            <li>+971 58 573 6600</li>
+                            <li>+971 58 527 4277</li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>info@agfitnessdxb.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Get In Touch Section End -->
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <p>Welcome to our platform, your go-to source for fitness, health, and personal well-being tips. Join us as we inspire healthier lifestyles!</p>
+                        <div class="fa-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Useful links</h4>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About Us</a></li>
+                            <li><a href="./team.html">Our Team</a></li>
+                            <li><a href="./Transformations.html">Transformations</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+    
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Contact Infos</h4>
+                        <ul>
+                            <li><a href="https://wa.me/971585736600" target="_blank">+971 58 573 6600</a></li>
+                            <li><a href="mailto:info@agfitnessdxb.com"> info@agfitnessdxb.com</a></li>
+                            <li><a href="https://www.google.com/maps/search/?api=1&query=AG+Fitness+Dubai" target="_blank">
+                                <i class="fas fa-map-marker-alt"></i> AG Fitness - Personal Trainers Dubai serves clients across the entire Dubai area
+                            </a></li>
+     
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Tips & Guides</h4>
+                        <div class="fw-recent">
+                            <h6><a href="./blog-details-1.html">Your Path to Muscle Growth Begins Here!</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>15 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="./blog-details-2.html">The Power of Core Strength for a Stronger You</a></h6>
+                            <ul>
+                                <li>5 min read</li>
+                                <li>10 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="./blog-details-5.html">The Benefits of Strength Training</a></h6>
+                            <ul>
+                                <li>8 min read</li>
+                                <li>12 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+     
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | <a href="https://github.com/lemarouane" target="_blank">AG Fitness</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+
+
+
+
+
+<!-- Floating Buttons -->
+<div id="whatsapp-button">
+    <a href="https://wa.me/971585736600?text=Hello%2C%20I%20am%20interested%20in%20your%20services%20and%20would%20like%20more%20information." target="_blank" title="Chat with us on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+</div>
+
+<!-- Back-to-Top Button -->
+<div id="back-to-top-button">
+    <button title="Back to Top">
+        <img src="./img/icons/top.png" alt="Back to Top">
+    </button>
+</div>
+
+
+ 
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+   
+<script>
+    document.addEventListener("scroll", () => {
+    const socialButtons = document.querySelector(".social-buttons");
+    if (window.scrollY > 100) {
+        socialButtons.classList.add("visible");
+    } else {
+        socialButtons.classList.remove("visible");
+    }
+});
+
+</script>
+
+ 
+
+    <!-- Js Plugins -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="./js/masonry.pkgd.min.js"></script>
+    <script src="./js/jquery.barfiller.js"></script>
+    <script src="./js/jquery.slicknav.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
+
+
+
+</body>
+
+</html>

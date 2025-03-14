@@ -1,0 +1,18 @@
+# User-agent directive allows or blocks crawlers from specific pages
+User-agent: *
+Disallow: /private/  # Example directory to block (add if needed)
+Disallow: /temp/     # Example temporary files (add if needed)
+Disallow: /admin/    # Block admin areas if applicable
+Allow: /             # Allow everything else
+
+# Sitemap location for crawlers
+Sitemap: https://yourwebsite.com/sitemap.xml
+
+# Additional directives
+User-agent: Googlebot
+Allow: /             # Allow Googlebot full access
+Crawl-delay: 10      # Wait 10 seconds between requests (adjust as necessary)
+
+User-agent: Bingbot      
+Allow: /
+Crawl-delay: 15      # Wait 15 seconds between requests
