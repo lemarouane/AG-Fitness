@@ -109,6 +109,483 @@
     </noscript>
     <!-- End Meta Pixel Code -->
 </head>
+<style>
+
+    /* Style the success message */
+    #successMessage {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    .check-icon {
+        font-size: 24px;
+        color: green;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .success-box p {
+        text-align: center;
+        font-size: 18px;
+        margin: 0;
+    }
+
+
+
+/* Default styles (desktop or larger devices) */
+.team-title .section-title {
+text-align: left;
+}
+.team-title .appoinment-btn {
+margin-left: 0;
+}
+
+/* Tablet-specific styles */
+@media (max-width: 768px) {
+.team-title {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.tablet-center-title {
+text-align: center;
+margin-left: 10em;
+}
+.tablet-center-subtitle {
+text-align: center;
+margin-bottom: -0.5em;
+}
+
+.tablet-center-button {
+display: inline-block;
+text-align: center;
+margin-right: 0em;
+margin-bottom: 2em;
+}
+}
+
+
+
+
+/* Default styles for banner section */
+.banner-section {
+position: relative;
+padding: 120px 0;
+text-align: center;
+background-size: cover;
+background-position: right center; /* Ensure the right edge of the image is visible */
+background-repeat: no-repeat;
+color: white;
+}
+
+/* Styles for text within the banner */
+.banner-section .bs-text {
+max-width: 600px;
+margin: auto;
+color: white;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+.banner-section {
+padding: 60px 20px; /* Reduce padding for mobile */
+background-position: center center; /* Ensure the image centers properly */
+}
+
+.banner-section .bs-text h2 {
+font-size: 1.8em; /* Scale down heading size */
+line-height: 1.4;
+}
+
+.banner-section .bs-text .bt-tips {
+font-size: 1em; /* Adjust subtitle size */
+}
+
+.banner-section .primary-btn {
+padding: 10px 20px; /* Reduce button size */
+font-size: 0.9em;
+}
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+.banner-section {
+padding: 40px 15px;
+background-size: cover; /* Ensure image scales properly */
+}
+
+.banner-section .bs-text h2 {
+font-size: 1.5em; /* Further reduce heading size */
+}
+
+.banner-section .bs-text .bt-tips {
+font-size: 0.9em;
+}
+}
+
+.modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.8);
+backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+}
+
+.modal-content {
+margin: 10% auto;
+padding: 30px;
+background-color: #fff;
+border-radius: 15px;
+width: 80%;
+max-width: 900px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+}
+
+.modal-body {
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 20px; /* Adds spacing between image/video and text */
+}
+
+.modal-image {
+flex: 1;
+min-width: 300px;
+max-width: 500px; /* Limit the maximum width for better control */
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.modal-image img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+object-fit: cover; /* Ensures the image fills the container */
+max-height: 500px; /* Limit the maximum height for images */
+}
+
+.modal-image video {
+width: 100%;
+height: auto;
+border-radius: 10px;
+max-height: 500px; /* Limit the maximum height for videos */
+object-fit: contain; /* Ensures videos are not cropped */
+}
+
+.modal-info {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.modal-info h3 {
+margin: 0;
+font-size: 28px;
+color: #333;
+font-weight: 700;
+text-align: center;
+}
+
+.modal-info p {
+margin: 10px 0;
+font-size: 16px;
+color: #666;
+line-height: 1.6;
+}
+
+.modal-info blockquote {
+margin: 20px 0;
+font-style: italic;
+color: #333;
+border-left: 4px solid #ff6b6b; /* Adds a colored border for emphasis */
+padding-left: 15px;
+font-size: 18px;
+line-height: 1.6;
+}
+
+.close {
+position: absolute;
+top: -4px;
+right: 4px;
+color: #000;
+font-size: 32px;
+font-weight: bold;
+cursor: pointer;
+transition: color 0.3s ease;
+z-index: 100000; /* Ensure it's on top of everything */
+padding: 10px; /* Increase clickable area */
+}
+
+.close:hover {
+color: #ff6b6b;
+}
+
+@media (max-width: 768px) {
+.modal-content {
+margin: 5% auto; /* Reduce margin for better use of screen space */
+padding: 20px; /* Reduce padding for smaller screens */
+width: 90%; /* Increase width to use more screen space */
+}
+
+.modal-body {
+flex-direction: column; /* Stack image/video and text vertically */
+gap: 15px; /* Add spacing between stacked elements */
+}
+
+.modal-image {
+width: 100%; /* Make image/video take full width */
+max-width: 100%; /* Ensure it doesn't overflow */
+min-width: unset; /* Remove min-width for mobile */
+}
+
+.modal-image img,
+.modal-image video {
+max-height: 300px; /* Reduce max height for mobile */
+width: 100%; /* Ensure it takes full width */
+border-radius: 10px;
+}
+
+.modal-info {
+width: 100%; /* Make text take full width */
+text-align: center; /* Center-align text for better readability */
+}
+
+.modal-info h3 {
+font-size: 24px; /* Slightly reduce font size for mobile */
+}
+
+.modal-info p {
+font-size: 14px; /* Reduce font size for mobile */
+}
+
+.modal-info blockquote {
+font-size: 16px; /* Reduce font size for mobile */
+padding-left: 10px; /* Adjust padding for smaller screens */
+}
+
+.close {
+top: 4-px; /* Adjust close button position */
+right: 4px; /* Adjust close button position */
+font-size: 28px; /* Slightly reduce close button size */
+}
+}
+/* Adjust for vertical (selfie-style) videos */
+.modal-image video.vertical {
+width: auto;
+height: 100%;
+max-height: 500px; /* Limit height for vertical videos */
+}
+
+/* Adjust for horizontal (wide) videos */
+.modal-image video.horizontal {
+width: 100%;
+height: auto;
+max-height: 500px; /* Limit height for horizontal videos */
+}
+
+
+
+.cta-button {
+color: #ffffff;
+background-color: #ff6600;
+padding: 15px 30px;
+font-size: 1.2em;
+font-weight: bold;
+border-radius: 10px;
+text-decoration: none;
+display: inline-block;
+position: relative;
+overflow: hidden;
+transition: padding-right 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect to swap colors and reveal arrow */
+.cta-button:hover {
+color: #ff6600; /* Text color changes to orange */
+background-color: #ffffff; /* Background changes to white */
+padding-right: 60px;
+}
+
+/* Arrow icon on hover */
+.cta-button::after {
+content: "";
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+width: 20px;
+height: 20px;
+background-image: url('./img/hero/arrow.png'); /* Adjust path if needed */
+background-size: contain;
+background-repeat: no-repeat;
+opacity: 0;
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover::after {
+opacity: 1;
+transform: translate(8px, -50%);
+}
+
+/* Add a slight fade-in effect */
+@keyframes fadeInEffect {
+0% { opacity: 0; transform: translateY(30px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+
+.chooseus-text {
+animation: fadeInEffect 0.8s ease-in-out;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 768px) {
+.chooseus-text h2 {
+font-size: 2em;
+}
+.chooseus-text p {
+font-size: 1em;
+}
+}
+.image-container img {
+width: 100%;
+height: auto;
+object-fit: cover; /* Adjusts image fit */
+max-height: 100%; /* Ensures image does not overflow section */
+}
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+transform: translateY(0);
+}
+40% {
+transform: translateY(-8px);
+}
+60% {
+transform: translateY(-4px);
+}
+}
+
+.primary-btnn {
+color: #ffffff;
+background-color: #ff6600;
+padding: 15px 30px;
+font-size: 1.2em;
+border-radius: 10px;
+font-weight: bold;
+transition: all 0.3s ease;
+overflow: hidden;
+white-space: nowrap;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+.primary-btnn {
+padding: 10px 20px;
+font-size: 1em;
+}
+}
+
+@media (max-width: 480px) {
+.primary-btnn {
+padding: 8px 16px;
+font-size: 0.9em;
+}
+}
+
+/* Button hover to grow and reveal arrow */
+.primary-btnn:hover {
+background-color: #ffffff; /* Change background to white */
+color: #ff6600; /* Text turns orange */
+padding-right: 60px; /* Extend padding to make room for the arrow */
+}
+
+/* Arrow image on hover */
+.primary-btnn::after {
+content: "";
+position: absolute;
+right: 20px; /* Align arrow to far right */
+top: 50%;
+transform: translateY(-50%);
+width: 20px; /* Set arrow image size */
+height: 20px;
+background-image: url('img/hero/arrow.png'); /* Path to your arrow image */
+background-size: contain;
+background-repeat: no-repeat;
+opacity: 0; /* Initially hidden */
+transition: opacity 0.3s ease, transform 0.3s ease;
+} 
+
+.primary-btnn:hover::after {
+opacity: 1; /* Arrow becomes visible */
+transform: translate(5px, -50%); /* Slight movement to the right */
+}
+
+
+/* Add this to your existing CSS */
+.navbar-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    padding: 15px 20px; /* Padding inside the card */
+    position: sticky;
+    top: 0; /* Stick to the very top of the page */
+    z-index: 1000; /* Ensure it stays above other content */
+    backdrop-filter: blur(5px); /* Optional: Adds a blur effect to the background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+    margin-top: -20px; /* Move the card upward to align with the top */
+}
+
+/* Style the navbar items inside the card */
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+}
+
+.nav-menu ul li a {
+    color: #fff; /* White text color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #ff6600; /* Orange color on hover */
+}
+</style>
 
 <body>
     <!-- Preloader -->
@@ -155,6 +632,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3">
+                    <!-- Logo (outside the card) -->
                     <div class="logo" style="position: absolute; top: -3em; left: 10px; z-index: 1000;">
                         <a href="./index.html">
                             <img src="./img/icons/agfitlogo.svg" alt="AG Fitness Logo - Dubai's Leading Fitness Center" style="width: 150px; height: auto;">
@@ -162,23 +640,26 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <nav class="nav-menu">
-                        <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./about-us.html">About Us</a></li>
-                            <li><a href="./team.html">Our Team</a></li>
-                            <li><a href="./Transformations.html">Transformations</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
+                    <!-- Navbar Card (only for the items) -->
+                    <div class="navbar-card">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Home</a></li>
+                                <li><a href="./about-us.html">About Us</a></li>
+                                <li><a href="./team.html">Our Team</a></li>
+                                <li><a href="./Transformations.html">Transformations</a></li>
+                                <li><a href="./blog.html">Blog</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
                 <div class="col-lg-3">
+                    <!-- Social Icons (outside the card) -->
                     <div class="top-option">
-                        
                         <div class="to-social">
                             <a href="https://www.facebook.com/AGFitnessdxb"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.tiktok.com/@agfitnessdxb?lang=en"><i class="fab fa-tiktok"></i>
+                            <a href="https://www.tiktok.com/@agfitnessdxb?lang=en"><i class="fab fa-tiktok"></i></a>
                             <a href="https://www.linkedin.com/company/agfitnessdxb"><i class="fab fa-linkedin"></i></a>
                             <a href="https://www.instagram.com/ag_fitness_dxb/"><i class="fa fa-instagram"></i></a>
                             <a href="mailto:info@agfitnessdxb.com"><i class="fa fa-envelope-o"></i></a>
@@ -186,14 +667,19 @@
                     </div>
                 </div>
             </div>
-            <div class="canvas-open">
-                <i class="fa fa-bars"></i>
-            </div>
         </div>
     </header>
     <!-- Header End -->
-
-
+<script>
+window.addEventListener('scroll', function() {
+    const navbarCard = document.querySelector('.navbar-card');
+    if (window.scrollY > 100) { // Adjust the scroll threshold as needed
+        navbarCard.classList.add('shrink');
+    } else {
+        navbarCard.classList.remove('shrink');
+    }
+});
+</script>
 
 
     <!-- Hero Section Begin -->
@@ -215,7 +701,7 @@
                             BUILD STRENGTH, LOSE FAT AND BOOST CONFIDENCE
                         </h2>
                         <!-- Button with hover and icon adjustments -->
-                        <a href="contact.html" class="primary-btnn" style="position: relative; display: inline-block; animation: bounce 1.5s infinite; z-index: 1000;">
+                        <a href="contact.html" class="primary-btnn" style="position: relative; display: inline-block;   z-index: 1000;">
                             BOOK YOUR FREE CONSULTATION
                         </a>
                     </div>
@@ -228,86 +714,7 @@
 
 
 
-    <!-- Inline Keyframes and Hover Effect -->
-    <style>
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% {
-            transform: translateY(0);
-        }
-        40% {
-            transform: translateY(-8px);
-        }
-        60% {
-            transform: translateY(-4px);
-        }
-    }
-    
-    .primary-btnn {
-    color: #ffffff;
-    background-color: #ff6600;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .primary-btnn {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .primary-btnn {
-        padding: 8px 16px;
-        font-size: 0.9em;
-    }
-}
-    
-    /* Button hover to grow and reveal arrow */
-    .primary-btnn:hover {
-        background-color: #ffffff; /* Change background to white */
-        color: #ff6600; /* Text turns orange */
-        padding-right: 60px; /* Extend padding to make room for the arrow */
-    }
-    
-    /* Arrow image on hover */
-    .primary-btnn::after {
-        content: "";
-        position: absolute;
-        right: 20px; /* Align arrow to far right */
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px; /* Set arrow image size */
-        height: 20px;
-        background-image: url('img/hero/arrow.png'); /* Path to your arrow image */
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0; /* Initially hidden */
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    } 
-         
-    .primary-btnn:hover::after {
-        opacity: 1; /* Arrow becomes visible */
-        transform: translate(5px, -50%); /* Slight movement to the right */
-    }
-    </style>
+ 
         
 <!-- Transformations Section Begin -->
 <section class="team-section spad">
@@ -468,15 +875,7 @@
     observer.observe(video);
 </script>
 
-    <!-- Inline CSS for image responsiveness -->
-    <style>
-    .image-container img {
-        width: 100%;
-        height: auto;
-        object-fit: cover; /* Adjusts image fit */
-        max-height: 100%; /* Ensures image does not overflow section */
-    }
-    </style>
+ 
     
 <!-- Video Section End -->
 
@@ -543,71 +942,7 @@
 
 
 
-<!-- Inline CSS for Button Styling -->
-<style>
-    /* Button styling */
-    .cta-button {
-        color: #ffffff;
-        background-color: #ff6600;
-        padding: 15px 30px;
-        font-size: 1.2em;
-        font-weight: bold;
-        border-radius: 50px;
-        text-decoration: none;
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        transition: padding-right 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    }
-
-    /* Hover effect to swap colors and reveal arrow */
-    .cta-button:hover {
-        color: #ff6600; /* Text color changes to orange */
-        background-color: #ffffff; /* Background changes to white */
-        padding-right: 60px;
-    }
-
-    /* Arrow icon on hover */
-    .cta-button::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        background-image: url('./img/hero/arrow.png'); /* Adjust path if needed */
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .cta-button:hover::after {
-        opacity: 1;
-        transform: translate(8px, -50%);
-    }
-
-    /* Add a slight fade-in effect */
-    @keyframes fadeInEffect {
-        0% { opacity: 0; transform: translateY(30px); }
-        100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .chooseus-text {
-        animation: fadeInEffect 0.8s ease-in-out;
-    }
-
-    /* Responsive text adjustments */
-    @media (max-width: 768px) {
-        .chooseus-text h2 {
-            font-size: 2em;
-        }
-        .chooseus-text p {
-            font-size: 1em;
-        }
-    }
-</style>
+ 
 
 
 
@@ -636,181 +971,7 @@
     </div>
 </div>
 
-<!-- Modal Styles -->
-<style>
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px); /* Adds a blur effect to the background */
-}
-
-.modal-content {
-    margin: 10% auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 15px;
-    width: 80%;
-    max-width: 900px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.modal-body {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 20px; /* Adds spacing between image/video and text */
-}
-
-.modal-image {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px; /* Limit the maximum width for better control */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover; /* Ensures the image fills the container */
-    max-height: 500px; /* Limit the maximum height for images */
-}
-
-.modal-image video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    max-height: 500px; /* Limit the maximum height for videos */
-    object-fit: contain; /* Ensures videos are not cropped */
-}
-
-.modal-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.modal-info h3 {
-    margin: 0;
-    font-size: 28px;
-    color: #333;
-    font-weight: 700;
-    text-align: center;
-}
-
-.modal-info p {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-}
-
-.modal-info blockquote {
-    margin: 20px 0;
-    font-style: italic;
-    color: #333;
-    border-left: 4px solid #ff6b6b; /* Adds a colored border for emphasis */
-    padding-left: 15px;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.close {
-    position: absolute;
-    top: -4px;
-    right: 4px;
-    color: #000;
-    font-size: 32px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    z-index: 100000; /* Ensure it's on top of everything */
-    padding: 10px; /* Increase clickable area */
-}
-
-.close:hover {
-    color: #ff6b6b;
-}
-
-@media (max-width: 768px) {
-    .modal-content {
-        margin: 5% auto; /* Reduce margin for better use of screen space */
-        padding: 20px; /* Reduce padding for smaller screens */
-        width: 90%; /* Increase width to use more screen space */
-    }
-
-    .modal-body {
-        flex-direction: column; /* Stack image/video and text vertically */
-        gap: 15px; /* Add spacing between stacked elements */
-    }
-
-    .modal-image {
-        width: 100%; /* Make image/video take full width */
-        max-width: 100%; /* Ensure it doesn't overflow */
-        min-width: unset; /* Remove min-width for mobile */
-    }
-
-    .modal-image img,
-    .modal-image video {
-        max-height: 300px; /* Reduce max height for mobile */
-        width: 100%; /* Ensure it takes full width */
-        border-radius: 10px;
-    }
-
-    .modal-info {
-        width: 100%; /* Make text take full width */
-        text-align: center; /* Center-align text for better readability */
-    }
-
-    .modal-info h3 {
-        font-size: 24px; /* Slightly reduce font size for mobile */
-    }
-
-    .modal-info p {
-        font-size: 14px; /* Reduce font size for mobile */
-    }
-
-    .modal-info blockquote {
-        font-size: 16px; /* Reduce font size for mobile */
-        padding-left: 10px; /* Adjust padding for smaller screens */
-    }
-
-    .close {
-        top: 4-px; /* Adjust close button position */
-        right: 4px; /* Adjust close button position */
-        font-size: 28px; /* Slightly reduce close button size */
-    }
-}
-/* Adjust for vertical (selfie-style) videos */
-.modal-image video.vertical {
-    width: auto;
-    height: 100%;
-    max-height: 500px; /* Limit height for vertical videos */
-}
-
-/* Adjust for horizontal (wide) videos */
-.modal-image video.horizontal {
-    width: 100%;
-    height: auto;
-    max-height: 500px; /* Limit height for horizontal videos */
-}
-
-
-
-</style>
+ 
 
 <!-- Modal Script -->
 <script>
@@ -878,65 +1039,7 @@ function openModal(title, goal, result, time, quote, mediaSrc, isVideo) {
 
 
 
-<style>
-/* Default styles for banner section */
-.banner-section {
-    position: relative;
-    padding: 120px 0;
-    text-align: center;
-    background-size: cover;
-    background-position: right center; /* Ensure the right edge of the image is visible */
-    background-repeat: no-repeat;
-    color: white;
-}
-
-/* Styles for text within the banner */
-.banner-section .bs-text {
-    max-width: 600px;
-    margin: auto;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    .banner-section {
-        padding: 60px 20px; /* Reduce padding for mobile */
-        background-position: center center; /* Ensure the image centers properly */
-    }
-
-    .banner-section .bs-text h2 {
-        font-size: 1.8em; /* Scale down heading size */
-        line-height: 1.4;
-    }
-
-    .banner-section .bs-text .bt-tips {
-        font-size: 1em; /* Adjust subtitle size */
-    }
-
-    .banner-section .primary-btn {
-        padding: 10px 20px; /* Reduce button size */
-        font-size: 0.9em;
-    }
-}
-
-/* Extra small devices (phones) */
-@media (max-width: 480px) {
-    .banner-section {
-        padding: 40px 15px;
-        background-size: cover; /* Ensure image scales properly */
-    }
-
-    .banner-section .bs-text h2 {
-        font-size: 1.5em; /* Further reduce heading size */
-    }
-
-    .banner-section .bs-text .bt-tips {
-        font-size: 0.9em;
-    }
-}
-
-</style>
+ 
 
 
 
@@ -961,45 +1064,7 @@ function openModal(title, goal, result, time, quote, mediaSrc, isVideo) {
 
 
 
-
-
-
-<style>
-/* Default styles (desktop or larger devices) */
-.team-title .section-title {
-    text-align: left;
-}
-.team-title .appoinment-btn {
-    margin-left: 0;
-}
-
-/* Tablet-specific styles */
-@media (max-width: 768px) {
-    .team-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tablet-center-title {
-        text-align: center;
-        margin-left: 10em;
-    }
-    .tablet-center-subtitle {
-        text-align: center;
-        margin-bottom: -0.5em;
-    }
-
-    .tablet-center-button {
-        display: inline-block;
-        text-align: center;
-        margin-right: 0em;
-        margin-bottom: 2em;
-    }
-}
-
-
-</style>
+ 
 <!-- Team Section Begin -->
 <section class="team-section spad">
     <div class="container">
@@ -1097,34 +1162,7 @@ function openModal(title, goal, result, time, quote, mediaSrc, isVideo) {
                         </div>
                     </div>
                     
-                    <style>
-                        /* Style the success message */
-                        #successMessage {
-                            position: fixed;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            background-color: #d4edda;
-                            color: #155724;
-                            border: 1px solid #c3e6cb;
-                            border-radius: 5px;
-                            padding: 20px;
-                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-                            z-index: 1000;
-                        }
-                        .check-icon {
-                            font-size: 24px;
-                            color: green;
-                            display: block;
-                            text-align: center;
-                            margin-bottom: 10px;
-                        }
-                        .success-box p {
-                            text-align: center;
-                            font-size: 18px;
-                            margin: 0;
-                        }
-                    </style>
+
 
                     <script>
                         document.getElementById("contactForm").addEventListener("submit", function(event) {

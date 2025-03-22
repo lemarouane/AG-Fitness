@@ -88,6 +88,209 @@
 
     <!-- Custom Styles -->
     <style>
+
+                        /* Style the success message */
+                        #successMessage {
+                            position: fixed;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: #d4edda;
+                            color: #155724;
+                            border: 1px solid #c3e6cb;
+                            border-radius: 5px;
+                            padding: 20px;
+                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                            z-index: 1000;
+                        }
+                        .check-icon {
+                            font-size: 24px;
+                            color: green;
+                            display: block;
+                            text-align: center;
+                            margin-bottom: 10px;
+                        }
+                        .success-box p {
+                            text-align: center;
+                            font-size: 18px;
+                            margin: 0;
+                        }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+}
+
+.modal-content {
+    margin: 10% auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px; /* Adds spacing between image/video and text */
+}
+
+.modal-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px; /* Limit the maximum width for better control */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image fills the container */
+    max-height: 500px; /* Limit the maximum height for images */
+}
+
+.modal-image video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 500px; /* Limit the maximum height for videos */
+    object-fit: contain; /* Ensures videos are not cropped */
+}
+
+.modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-info h3 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.modal-info blockquote {
+    margin: 20px 0;
+    font-style: italic;
+    color: #333;
+    border-left: 4px solid #ff6b6b; /* Adds a colored border for emphasis */
+    padding-left: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.close {
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 100000; /* Ensure it's on top of everything */
+    padding: 10px; /* Increase clickable area */
+}
+
+.close:hover {
+    color: #ff6b6b;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 5% auto; /* Reduce margin for better use of screen space */
+        padding: 20px; /* Reduce padding for smaller screens */
+        width: 90%; /* Increase width to use more screen space */
+    }
+
+    .modal-body {
+        flex-direction: column; /* Stack image/video and text vertically */
+        gap: 15px; /* Add spacing between stacked elements */
+    }
+
+    .modal-image {
+        width: 100%; /* Make image/video take full width */
+        max-width: 100%; /* Ensure it doesn't overflow */
+        min-width: unset; /* Remove min-width for mobile */
+    }
+
+    .modal-image img,
+    .modal-image video {
+        max-height: 300px; /* Reduce max height for mobile */
+        width: 100%; /* Ensure it takes full width */
+        border-radius: 10px;
+    }
+
+    .modal-info {
+        width: 100%; /* Make text take full width */
+        text-align: center; /* Center-align text for better readability */
+    }
+
+    .modal-info h3 {
+        font-size: 24px; /* Slightly reduce font size for mobile */
+    }
+
+    .modal-info p {
+        font-size: 14px; /* Reduce font size for mobile */
+    }
+
+    .modal-info blockquote {
+        font-size: 16px; /* Reduce font size for mobile */
+        padding-left: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .close {
+        top: 4-px; /* Adjust close button position */
+        right: 4px; /* Adjust close button position */
+        font-size: 28px; /* Slightly reduce close button size */
+    }
+}
+/* Adjust for vertical (selfie-style) videos */
+.modal-image video.vertical {
+    width: auto;
+    height: 100%;
+    max-height: 500px; /* Limit height for vertical videos */
+}
+
+/* Adjust for horizontal (wide) videos */
+.modal-image video.horizontal {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Limit height for horizontal videos */
+}
+
+
+
+
+
         /* Reduce space between Transformations and Contact sections */
         .team-section.spad {
             padding-bottom: 40px; /* Adjust this value as needed */
@@ -362,182 +565,7 @@
     </div>
 </div>
 
-<!-- Modal Styles -->
-<style>
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px); /* Adds a blur effect to the background */
-}
-
-.modal-content {
-    margin: 10% auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 15px;
-    width: 80%;
-    max-width: 900px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.modal-body {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 20px; /* Adds spacing between image/video and text */
-}
-
-.modal-image {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px; /* Limit the maximum width for better control */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover; /* Ensures the image fills the container */
-    max-height: 500px; /* Limit the maximum height for images */
-}
-
-.modal-image video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    max-height: 500px; /* Limit the maximum height for videos */
-    object-fit: contain; /* Ensures videos are not cropped */
-}
-
-.modal-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.modal-info h3 {
-    margin: 0;
-    font-size: 28px;
-    color: #333;
-    font-weight: 700;
-    text-align: center;
-}
-
-.modal-info p {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-}
-
-.modal-info blockquote {
-    margin: 20px 0;
-    font-style: italic;
-    color: #333;
-    border-left: 4px solid #ff6b6b; /* Adds a colored border for emphasis */
-    padding-left: 15px;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.close {
-    position: absolute;
-    top: -4px;
-    right: 4px;
-    color: #000;
-    font-size: 32px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    z-index: 100000; /* Ensure it's on top of everything */
-    padding: 10px; /* Increase clickable area */
-}
-
-.close:hover {
-    color: #ff6b6b;
-}
-
-@media (max-width: 768px) {
-    .modal-content {
-        margin: 5% auto; /* Reduce margin for better use of screen space */
-        padding: 20px; /* Reduce padding for smaller screens */
-        width: 90%; /* Increase width to use more screen space */
-    }
-
-    .modal-body {
-        flex-direction: column; /* Stack image/video and text vertically */
-        gap: 15px; /* Add spacing between stacked elements */
-    }
-
-    .modal-image {
-        width: 100%; /* Make image/video take full width */
-        max-width: 100%; /* Ensure it doesn't overflow */
-        min-width: unset; /* Remove min-width for mobile */
-    }
-
-    .modal-image img,
-    .modal-image video {
-        max-height: 300px; /* Reduce max height for mobile */
-        width: 100%; /* Ensure it takes full width */
-        border-radius: 10px;
-    }
-
-    .modal-info {
-        width: 100%; /* Make text take full width */
-        text-align: center; /* Center-align text for better readability */
-    }
-
-    .modal-info h3 {
-        font-size: 24px; /* Slightly reduce font size for mobile */
-    }
-
-    .modal-info p {
-        font-size: 14px; /* Reduce font size for mobile */
-    }
-
-    .modal-info blockquote {
-        font-size: 16px; /* Reduce font size for mobile */
-        padding-left: 10px; /* Adjust padding for smaller screens */
-    }
-
-    .close {
-        top: 4-px; /* Adjust close button position */
-        right: 4px; /* Adjust close button position */
-        font-size: 28px; /* Slightly reduce close button size */
-    }
-}
-/* Adjust for vertical (selfie-style) videos */
-.modal-image video.vertical {
-    width: auto;
-    height: 100%;
-    max-height: 500px; /* Limit height for vertical videos */
-}
-
-/* Adjust for horizontal (wide) videos */
-.modal-image video.horizontal {
-    width: 100%;
-    height: auto;
-    max-height: 500px; /* Limit height for horizontal videos */
-}
-
-
-
-</style>
-
+ 
 <!-- Modal Script -->
 <script>
 function openModal(title, goal, result, time, quote, mediaSrc, isVideo) {
@@ -662,36 +690,7 @@ function openModal(title, goal, result, time, quote, mediaSrc, isVideo) {
                         </div>
                     </div>
                     
-                    <style>
-                        /* Style the success message */
-                        #successMessage {
-                            position: fixed;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            background-color: #d4edda;
-                            color: #155724;
-                            border: 1px solid #c3e6cb;
-                            border-radius: 5px;
-                            padding: 20px;
-                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-                            z-index: 1000;
-                        }
-                        .check-icon {
-                            font-size: 24px;
-                            color: green;
-                            display: block;
-                            text-align: center;
-                            margin-bottom: 10px;
-                        }
-                        .success-box p {
-                            text-align: center;
-                            font-size: 18px;
-                            margin: 0;
-                        }
-                    </style>
-
-                    <script>
+                     <script>
                         document.getElementById("contactForm").addEventListener("submit", function(event) {
                             event.preventDefault(); // Prevent form from submitting normally
 
