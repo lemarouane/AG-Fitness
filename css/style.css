@@ -40,7 +40,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #EFCFA0, #532200); /* Style the scrollbar thumb */
+    background: linear-gradient(45deg, #ff6600, #f36100); /* Style the scrollbar thumb */
     border-radius: 6px; /* Rounded scrollbar thumb */
 }
 
@@ -55,12 +55,12 @@ body {
 /* For Firefox */
 html {
     scrollbar-width: thin; /* Make the scrollbar minimal */
-    scrollbar-color: #EFCFA0 transparent; /* Thumb color, no visible track */
+    scrollbar-color: #ff6600 transparent; /* Thumb color, no visible track */
 }
 
 /* Optional: Hover Effect */
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #532200, #c0392b); /* Darker color on hover */
+    background: linear-gradient(45deg, #f36100, #c0392b); /* Darker color on hover */
 }
 
 
@@ -145,7 +145,7 @@ ol {
 
 .section-title span {
 	font-size: 16px;
-	color: #532200;
+	color: #f36100;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -195,7 +195,7 @@ ol {
 	font-size: 14px;
 	padding: 17px 30px 16px;
 	color: #ffffff;
-	background: #532200;
+	background: #f36100;
 	line-height: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -210,8 +210,8 @@ ol {
 }
 
 .primary-btn.btn-normal:hover {
-	background: #532200;
-	border-color: #532200;
+	background: #f36100;
+	border-color: #f36100;
 }
 
 /* Preloder */
@@ -243,7 +243,7 @@ ol {
 	0% {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
-		border: 4px solid #914110;
+		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
 	50% {
@@ -255,7 +255,7 @@ ol {
 	100% {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
-		border: 4px solid #914110;
+		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
 }
@@ -263,7 +263,7 @@ ol {
 @-webkit-keyframes loader {
 	0% {
 		-webkit-transform: rotate(0deg);
-		border: 4px solid #914110;
+		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
 	50% {
@@ -273,7 +273,7 @@ ol {
 	}
 	100% {
 		-webkit-transform: rotate(360deg);
-		border: 4px solid #914110;
+		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
 }
@@ -413,7 +413,7 @@ ol {
 }
 
 .nav-menu ul li.active>a {
-	color: #532200;
+	color: #f36100;
 }
 
 .nav-menu ul li.active>a:after {
@@ -421,7 +421,7 @@ ol {
 }
 
 .nav-menu ul li:hover>a {
-	color: #532200;
+	color: #f36100;
 }
 
 .nav-menu ul li:hover>a:after {
@@ -454,7 +454,7 @@ ol {
 	top: 22px;
 	height: 1px;
 	width: 100%;
-	background: #532200;
+	background: #f36100;
 	content: "";
 	-webkit-transform: rotate(-20deg);
 	-ms-transform: rotate(-20deg);
@@ -599,7 +599,7 @@ ol {
 }
 
 .hs-slider .hs-item .hi-text h1 strong {
-	color: #532200;
+	color: #f36100;
 }
 
 .hs-slider .hs-item .hi-text .primary-btn {
@@ -624,7 +624,7 @@ ol {
 
 .cs-item:hover span {
 	background: #ffffff;
-	color: #532200;
+	color: #f36100;
 
 
 }
@@ -641,7 +641,7 @@ ol {
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-	background: #532200;
+	background: #f36100;
 
 }
 
@@ -698,7 +698,7 @@ ol {
 }
 
 .class-item .ci-text span {
-	color: #532200;
+	color: #f36100;
 	font-size: 12px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -774,14 +774,14 @@ ol {
 
 .bs-text .primary-btn {
 	background: transparent;
-	border: 2px solid #532200;
+	border: 2px solid #f36100;
 }
 
 .bs-text .play-btn {
 	display: inline-block;
 	height: 70px;
 	width: 70px;
-	background: #532200;
+	background: #f36100;
 	border-radius: 50%;
 	line-height: 70px;
 	text-align: center;
@@ -834,7 +834,7 @@ ol {
 }
 
 .ps-item:hover .primary-btn.pricing-btn {
-	background: #532200;
+	background: #f36100;
 }
 
 .ps-item:hover .thumb-icon {
@@ -861,7 +861,7 @@ ol {
 
 .ps-item .pi-price h2 {
 	font-size: 60px;
-	color: #532200;
+	color: #f36100;
 	font-weight: 600;
 }
 
@@ -896,7 +896,7 @@ ol {
 
 .ps-item .thumb-icon {
 	font-size: 48px;
-	color: #532200;
+	color: #f36100;
 	position: absolute;
 	left: 50px;
 	bottom: 120px;
@@ -943,7 +943,7 @@ ol {
 
 .gallery .gs-item .thumb-icon {
 	font-size: 48px;
-	color: #532200;
+	color: #f36100;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1009,7 +1009,7 @@ ol {
 }
 
 .primary-btn.appoinment-btn {
-	border: 2px solid #532200;
+	border: 2px solid #f36100;
 	float: right;
 	margin-top: 10px;
 }
@@ -1034,7 +1034,7 @@ ol {
 }
 
 .ts-slider.owl-carousel .owl-dots button.active {
-	background: #532200;
+	background: #f36100;
 }
 
 .ts-slider.owl-carousel .owl-dots button:last-child {
@@ -1109,7 +1109,7 @@ ol {
 	display: inline-block;
 	height: 65px;
 	width: 65px;
-	background: #532200;
+	background: #f36100;
 	border-radius: 50%;
 	line-height: 65px;
 	text-align: center;
@@ -1264,7 +1264,7 @@ ol {
 
 .copyright-text a,
 .copyright-text i {
-	color: #532200;
+	color: #f36100;
 }
 
 /* ----------------------------------- Other Pages Styles ----------------------------------- */
@@ -1310,7 +1310,7 @@ ol {
 
 .breadcrumb-text .bt-option span {
 	font-size: 18px;
-	color: #532200;
+	color: #f36100;
 	font-weight: 700;
 }
 
@@ -1329,7 +1329,7 @@ ol {
 	display: inline-block;
 	height: 70px;
 	width: 70px;
-	background: #532200;
+	background: #f36100;
 	border-radius: 50%;
 	line-height: 70px;
 	text-align: center;
@@ -1474,7 +1474,7 @@ ol {
 }
 
 .ss-text:hover a {
-	color: #532200;
+	color: #f36100;
 }
 
 .ss-text:hover:after {
@@ -1649,7 +1649,7 @@ ol {
 .class-timetable table thead tr th {
 	font-size: 14px;
 	color: #ffffff;
-	background: #532200;
+	background: #f36100;
 	border-right: 1px solid #363636;
 	padding: 15px 0;
 	font-weight: 400;
@@ -1662,7 +1662,7 @@ ol {
 
 .class-timetable table tbody tr td.class-time {
 	font-size: 12px;
-	color: #532200;
+	color: #f36100;
 	background: #000000;
 	border: 1px solid #363636;
 }
@@ -1678,7 +1678,7 @@ ol {
 }
 
 .class-timetable table tbody tr td.hover-bg:hover {
-	background: #532200;
+	background: #f36100;
 }
 
 .class-timetable table tbody tr td.blank-td {
@@ -1837,7 +1837,7 @@ ol {
 }
 
 .sidebar-option .so-categories ul li:hover a {
-	color: #532200;
+	color: #f36100;
 }
 
 .sidebar-option .so-categories ul li:hover a span {
@@ -2074,7 +2074,7 @@ ol {
 	width: 100%;
 	border: none;
 	padding: 15px 0;
-	background: #532200;
+	background: #f36100;
 }
 
 /*---------------------
@@ -2577,7 +2577,7 @@ ol {
 	width: 100%;
 	border: none;
 	padding: 14px 0 12px;
-	background: #532200;
+	background: #f36100;
 	border-radius: 20px;
 }
 
@@ -2601,7 +2601,7 @@ ol {
 
 .contact-widget .cw-text i {
 	font-size: 30px;
-	color: #532200;
+	color: #f36100;
 	display: inline-block;
 	height: 65px;
 	width: 65px;
@@ -2716,7 +2716,7 @@ ol {
 	color: #ffffffb3;
 	height: 46px;
 	width: 100%;
-	background: #532200;
+	background: #f36100;
 	border: none;
 	padding-left: 20px;
 }
@@ -2772,7 +2772,7 @@ ol {
 }
 
 .text-404 a i {
-	color: #532200;
+	color: #f36100;
 	margin-right: 5px;
 }
 
@@ -2981,12 +2981,12 @@ ol {
 	.offcanvas-menu-wrapper .slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
 		background: transparent;
-		color: #532200;
+		color: #f36100;
 	}
 	.offcanvas-menu-wrapper .slicknav_nav a:hover {
 		border-radius: 0;
 		background: transparent;
-		color: #532200;
+		color: #f36100;
 	}
 	.nav-menu {
 		display: none;
@@ -3129,15 +3129,15 @@ ol {
 	.offcanvas-menu-wrapper .slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
 		background: transparent;
-		color: #532200;
+		color: #f36100;
 	}
 	.offcanvas-menu-wrapper .slicknav_nav .slicknav_row:hover a {
-		color: #532200;
+		color: #f36100;
 	}
 	.offcanvas-menu-wrapper .slicknav_nav a:hover {
 		border-radius: 0;
 		background: transparent;
-		color: #532200;
+		color: #f36100;
 	}
 	.nav-menu {
 		display: none;
